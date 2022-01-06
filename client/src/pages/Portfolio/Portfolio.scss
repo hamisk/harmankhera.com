@@ -1,0 +1,10 @@
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    &__image {
+        width: 90%;
+    }
+}

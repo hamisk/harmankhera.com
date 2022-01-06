@@ -1,0 +1,12 @@
+@use '../../styles/partials/mixins' as *;
+
+.navmenu {
+    @include tablet {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__link {
+        margin: 0 1rem;
+    }
+}

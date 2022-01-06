@@ -1,0 +1,171 @@
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+.nav-bar {
+  background-color: #FFF0ED;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 1rem;
+}
+
+.nav-bar__logo-and-title {
+  display: flex;
+  /* align-items: center; */
+  padding-left: 1.2rem;
+  padding-top: 1rem;
+}
+
+.nav-bar__title {
+  font-weight: 300;
+  font-size: 3.75rem;
+  margin: 0;
+  text-decoration: none;
+}
+
+.nav-bar__title--link {
+  text-decoration: none;
+  color: #393939;
+}
+
+.nav-bar__logo {
+  height: 3.5rem;
+}
+
+.nav-bar__menu--list {
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+}
+
+.nav-bar__menu-links {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #393939;
+  /* text-decoration-color: #5BACC3; */
+  padding: 0 1.5rem;
+}
+
+.nav-bar__menu-links--shop {
+  color: #5BACC3;
+}
+
+/* Remove margin and padding from default element styling */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  text-align: center;
+}
+
+.hero-box {
+  background-image: url(../assets/images/coffee-circle.jpg);
+  width: 100%;
+  min-height: 36rem;
+  max-height: 37.5rem;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.hero-box__title {
+  color: white;
+  font-size: 3.75rem;
+  text-align: center;
+  font-weight: 300;
+}
+.hero-box__title-box {
+  box-sizing: border-box;
+  width: 18rem;
+  height: 11.5rem;
+  border: #5BACC3 5px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+.hero-box__title-box--background {
+  width: 18rem;
+  height: 11.5rem;
+  position: absolute;
+  background-color: #393939;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.main-nav {
+  box-sizing: border-box;
+  background-color: #393939;
+  height: 4rem;
+  width: 100%;
+}
+.main-nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+}
+.main-nav__list-item {
+  padding: 0 1rem;
+  border-color: #393939;
+  border-left: #5BACC3;
+  border-width: 0.25rem;
+  border-style: solid;
+}
+.main-nav__links {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 300;
+}
+
+.product {
+  background-color: #FFF0ED;
+}
+.product--cold-drinks {
+  background-color: #F7F7F7;
+}
+.product__title {
+  color: #393939;
+  font-size: 3.75rem;
+  font-weight: 300;
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+.product__name {
+  font-size: 2rem;
+  font-weight: 300;
+  padding-top: 0;
+  padding-bottom: 0.5rem;
+}
+.product__desc {
+  font-size: 1.125rem;
+  font-style: italic;
+  width: 30rem;
+  max-width: 31.25rem;
+  margin: auto;
+}
+.product__price {
+  font-style: normal;
+  color: #5BACC3;
+  font-size: 1.125rem;
+  padding-top: 0.25rem;
+  padding-bottom: 2rem;
+}/*# sourceMappingURL=menu.css.map */

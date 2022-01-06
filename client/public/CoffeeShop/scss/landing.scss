@@ -1,0 +1,331 @@
+@use './partials/global';
+@use './partials/colors' as *;
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes flash {
+    0% {background-color: $neutral-one;}
+    50% {background-color: $primary-color-two;}
+    100% {background-color: $neutral-one;}
+}
+
+
+.title-big {
+    font-weight: 300;
+    font-size: 3.75rem;
+    margin: 0;
+}
+.title-small {
+    font-weight: 300;
+    font-size: 2rem;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+}
+.header {
+    &__container {
+        background-color: $primary-color;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__box{
+        padding: 2rem 2rem 4rem;
+        align-self: center;
+        
+        &--text {
+            width: 22rem;
+            padding-left: 2rem;
+        }
+
+        &--title {
+            @extend .title-big;
+            color:  $font-color-primary;
+            padding-bottom: 1rem;
+             width: 100%;
+        }
+
+        &--copy {
+            font-size: 1.125rem;
+            font-weight: 400;
+            color: $font-color-primary;
+            padding-bottom: 1rem;
+            width: 100%;
+        }
+    }
+}
+
+section {
+    margin: auto;
+}
+
+.product {
+    background-color: $neutral-three;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
+
+    &__title{
+        @extend .title-big;
+        color:  $font-color-primary;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-bottom: 2rem;
+    }
+}
+
+.product-card {
+    width: 21rem;
+    height: 28rem;
+    background-color: $neutral-four;
+    border-radius: 0.625rem;
+    box-shadow: 0 5px 9px -1px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    
+    &__image {
+        padding: 2rem;
+        align-self: center;
+        height: 15rem;
+    }
+
+    &__price {
+        color: $primary-color-two;
+        font-size: 2rem;
+        font-weight: bold;
+        padding-right: 1.5rem;
+    }
+
+    &__title {
+        @extend .title-small;
+        color:  $font-color-primary;
+    }
+
+    &__text-left {
+        text-align: left;
+        padding-left: 1.5rem;
+    }
+
+    &__copy-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+        background-color: $primary-color;
+        border-radius: 0 0 10px 10px;
+    }
+
+    &__desc {
+        color: $font-color-alt;
+        font-size: 18px;
+        padding-top: 0.5rem;
+        margin: 0;
+    }
+}
+
+.discount {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__container {
+        padding-top: 7rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        @extend .title-big;
+        color:  $font-color-primary;
+        padding-bottom: 1rem;
+        width: 100%;
+    }
+
+    &__copy {
+        font-size: 1.125rem;
+        font-weight: 400;
+        color: $font-color-primary;
+        padding-bottom: 1rem;
+        width: 100%;
+    }
+
+    &__text-box {
+        width: 35%;
+    }
+
+    &__icons-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 2.5rem;
+    }
+
+    &__icon {
+        width: 3.2rem;
+    }
+
+    &__background {
+        background-image: url(../assets/images/coldbrewbackground.png);
+        background-position: center;
+        background-size: cover;
+        width: 25rem;
+        height: 25rem;
+        position: relative;
+    }
+
+    &__border {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        border: 5px $primary-color-two solid;
+        position: absolute;
+        top: -1.25rem;
+        left: -1.25rem;
+    }
+    
+    &__image {
+        z-index: 1;
+        position: absolute;
+        padding: 54px 118px;
+
+        &:hover {
+            animation-name: rotate; 
+            animation-duration: 2s; 
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    }
+    
+    &__banner {
+        background-color: $neutral-one;
+        width: 100%;    
+        color: $font-color-second;
+        text-align: center;
+        font-size: 2.8rem;
+        margin: 10rem 0;
+        padding: 2rem 0;
+        align-self: center;
+        animation-name: flash; 
+        animation-duration: 2.5s; 
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+}
+
+span {
+    font-weight: 700;
+}
+
+.cta-container {
+    background-color: $primary-color-two;
+    width: 11.25rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cta-button {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    color: $font-color-second;
+    font-size: 1.3rem;
+    font-weight: 300;
+    border: $neutral-one 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+
+    &:active {
+        transform: translate(5px, 5px);
+    }
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+
+    &__container {
+        background-color: $primary-color;
+        padding: 2rem;
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    &__box {
+        width: fit-content;
+
+        &--social {
+            width: fit-content;
+        }
+    }
+
+    &__title {
+        @extend .title-small;
+        color:  $font-color-primary;
+        padding-bottom: 1.5rem;
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    &__icon {
+        width: 3.2rem;
+    }
+
+    &__text {
+        padding: 0.2rem;
+        margin: 0;
+    }
+
+    &__text-wrapper {
+        margin-top: auto;
+    }
+
+    &__logo {
+        position: absolute;
+        left: -1.25rem;
+        top: 1.25rem;
+        opacity: 0.25;
+        width: 5rem;
+        z-index: 1;
+
+        &--right {
+            position: absolute;
+            right: -1.25rem;
+            bottom: 1.25rem;
+            opacity: 0.25;
+            width: 5rem;
+            z-index: 1;
+
+        }
+    }
+}
