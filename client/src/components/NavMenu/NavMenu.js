@@ -5,8 +5,10 @@ import './NavMenu.scss'
 function NavMenu() {
     return (
         <nav className='navmenu'>
-            {/* <Link to="/about"><p className='navmenu__link'>About</p></Link> */}
-            <Link to="/"><p className='navmenu__link'>Portfolio</p></Link>
+            <Link to="/"><p className='navmenu__link'>Home</p></Link>
+            <Link to="/about"><p className='navmenu__link'>About</p></Link>
+            <Link to="/portfolio"><p className='navmenu__link'>Portfolio</p></Link>
+            <Link to="/contact"><p className='navmenu__link'>Contact</p></Link>
         </nav>
     )
 }

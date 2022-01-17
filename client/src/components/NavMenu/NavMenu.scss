@@ -3,7 +3,6 @@
 .navmenu {
     @include tablet {
         display: flex;
-        justify-content: center;
     }
 
     &__link {
