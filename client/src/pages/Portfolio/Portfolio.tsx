@@ -7,6 +7,8 @@ function Portfolio() {
             <p>Check my work below</p>
             <img src={greenly1} alt='greenly' className='portfolio__image' />
             <a href="../BandSite/index.html">BandSite</a>
+            <img src={greenly1} alt='greenly' className='portfolio__image' />
+            <img src={greenly1} alt='greenly' className='portfolio__image' />
         </div>
     )
 }

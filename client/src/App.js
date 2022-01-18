@@ -12,10 +12,10 @@ function App() {
 				<NavMenu />
                 <Routes>
                     <Route path="/" element={<Portfolio />} />
-					<Route exact path="/bandsite" render={() => {window.location.href="index.html"}} />
-					<Route exact path="/coffeeshop" render={() => {window.location.href="index.html"}} />
-					<Route exact path="/hackathon" render={() => {window.location.href="index.html"}} />
-					<Route exact path="/travelsite" render={() => {window.location.href="index.html"}} />
+					<Route path="/bandsite" render={() => {window.location.href="index.html"}} />
+					<Route path="/coffeeshop" render={() => {window.location.href="index.html"}} />
+					<Route path="/hackathon" render={() => {window.location.href="index.html"}} />
+					<Route path="/travelsite" render={() => {window.location.href="index.html"}} />
                 </Routes>
 			</div>
 		</BrowserRouter>

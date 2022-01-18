@@ -1,6 +1,17 @@
 @use '../../styles/partials/mixins' as *;
 
 .navmenu {
+
+    background-color: green;
+    height: 3rem;
+    width: 100%;
+
+    &--sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
     @include tablet {
         display: flex;
     }
