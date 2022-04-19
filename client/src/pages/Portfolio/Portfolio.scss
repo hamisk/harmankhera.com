@@ -4,7 +4,16 @@
     width: 100%;
     align-items: center;
 
+    &__grid {
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
     &__image {
-        width: 90%;
+        width: 47.5%;
+        margin: 0.5rem;
+        border-radius: 4px;
     }
 }

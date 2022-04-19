@@ -1,0 +1,38 @@
+.preview {
+
+    &__container {
+        width: 47.5%;
+        margin: 0.5rem;
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__image {
+        border-radius: 4px;
+        width: 100%;
+        // height: auto;
+        opacity: 1;
+        // display: block;
+        transition: 0.5s ease;
+        // backface-visibility: hidden;
+    }
+
+    &__overlay {
+        transition: 0.5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        // background-color: #008CBA;
+    }
+}
+
+.preview__container:hover .preview__image {
+    opacity: 0.3;
+}
+
+.preview__container:hover .preview__overlay {
+    opacity: 1;
+}

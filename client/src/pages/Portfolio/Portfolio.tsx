@@ -1,14 +1,17 @@
 import './Portfolio.scss'
-import greenly1 from '../../assets/images/greenly1.png'
+import Preview from '../../components/Preview/Preview.js'
 
 function Portfolio() {
     return (
         <div className='portfolio'>
-            <p>Check my work below</p>
-            <img src={greenly1} alt='greenly' className='portfolio__image' />
+            <h2>Projects</h2>
+            <div className="portfolio__grid">
+                <Preview />
+                <Preview />
+                <Preview />
+                <Preview />
+            </div>
             <a href="../BandSite/index.html">BandSite</a>
-            <img src={greenly1} alt='greenly' className='portfolio__image' />
-            <img src={greenly1} alt='greenly' className='portfolio__image' />
         </div>
     )
 }

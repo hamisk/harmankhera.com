@@ -1,6 +1,20 @@
+@use './styles/partials/colors' as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: $color-black-olive;
+}
+
+a {
+  text-decoration: none;
+}
+
 .App {
   text-align: center;
-  background-image: url(./assets/images/filip-zrnzevic-QsWG0kjPQRY-unsplash-full.jpg);
+  // background-image: url(./assets/images/filip-zrnzevic-QsWG0kjPQRY-unsplash-full.jpg);
   background-size: cover;
   background-position-x: center;
 }
