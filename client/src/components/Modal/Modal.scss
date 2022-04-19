@@ -1,0 +1,25 @@
+.modal {
+
+    &__background {
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        opacity: 0.3;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__container {
+        width: 500px;
+        height: 500px;
+        border-radius: 12px;
+        background-color: white;
+    }
+
+
+    &__close {
+
+    }
+}
