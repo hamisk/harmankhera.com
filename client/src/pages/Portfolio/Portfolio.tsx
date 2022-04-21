@@ -1,5 +1,5 @@
 import './Portfolio.scss'
-import Preview from '../../components/Preview/Preview.js'
+import Preview from '../../components/Preview/Preview.jsx'
 
 function Portfolio() {
     return (

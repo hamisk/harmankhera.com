@@ -5,18 +5,21 @@ import './Preview.scss'
 
 function Preview() {
 
-  const [openModal, setOpenModal] = useState(false)
+  const [showModal, setShowModal] = useState(false)
+
+  const hideModal = () => {
+    setShowModal(false)
+  }
 
   return (
-    <div className='preview__container' onClick={()=>{
-      console.log("click")
-      setOpenModal(true)
-      console.log(openModal)}}>
+    <div className='preview__container' >
         <img src={screenshot} alt='screenshot' className='preview__image' />
-        <div className='preview__overlay'>
+        <div className='preview__overlay' onClick={()=>{
+          setShowModal(true)
+          console.log("showModal", showModal)}}>
             <div className='preview__text'>bare descriptive</div>
         </div>
-        {openModal && <Modal closeModal={setOpenModal} openModal={openModal}/>}
+        <Modal showModal={showModal} handleClose={hideModal}/>
         {/* if openModal === true, then show modal */}
     </div>
   )
