@@ -1,0 +1,138 @@
+[{
+        "project": "bandsite",
+        "background": "/img/slides/bandsite-0.jpg",
+        "title": "Band Site",
+        "tech": "JavaScript",
+        "description": "An interactive and responsive website for an up-and-coming band.",
+        "siteURL": "../BandSite/index.html",
+        "images": [
+            {
+                "original": "/img/slides/bandsite-1.png",
+                "thumbnail": "/img/slides/bandsite-1.png"
+            },
+            {
+                "original": "/img/slides/bandsite-2.png",
+                "thumbnail": "/img/slides/bandsite-2.png"
+            },
+            {
+                "original": "/img/slides/bandsite-3.png",
+                "thumbnail": "/img/slides/bandsite-3.png"
+            },
+            {
+                "original": "/img/slides/bandsite-4.png",
+                "thumbnail": "/img/slides/bandsite-4.png"
+            },
+            {
+                "original": "/img/slides/bandsite-5.png",
+                "thumbnail": "/img/slides/bandsite-5.png"
+            },
+            {
+                "original": "/img/slides/bandsite-6.png",
+                "thumbnail": "/img/slides/bandsite-6.png"
+            }]
+    },
+    {
+        "project": "coffeeshop",
+        "background": "/img/slides/coffeeshop-0.png",
+        "title": "Coffee Shop",
+        "tech": "HTML / SCSS",
+        "description": "A responsive website for a local coffee shop.",
+        "siteURL": "../CoffeeShop/index.html",
+        "images": [
+            {
+                "original": "/img/slides/coffeeshop-0.png",
+                "thumbnail": "/img/slides/coffeeshop-0.png"
+            },
+            {
+                "original": "/img/slides/coffeeshop-1.png",
+                "thumbnail": "/img/slides/coffeeshop-1.png"
+            },
+            {
+                "original": "/img/slides/coffeeshop-2.png",
+                "thumbnail": "/img/slides/coffeeshop-2.png"
+            },
+            {
+                "original": "/img/slides/coffeeshop-3.png",
+                "thumbnail": "/img/slides/coffeeshop-3.png"
+            },
+            {
+                "original": "/img/slides/coffeeshop-4.png",
+                "thumbnail": "/img/slides/coffeeshop-4.png"
+            }]
+    },
+    {
+        "project": "travelsite",
+        "background": "/img/slides/travelsite-0.png",
+        "title": "Travel Site",
+        "tech": "HTML / CSS",
+        "description": "A responsive website for a local travel agency.",
+        "siteURL": "../TravelSite/index.html",
+        "images": [
+            {
+                "original": "/img/slides/travelsite-0.png",
+                "thumbnail": "/img/slides/travelsite-0.png"
+            },
+            {
+                "original": "/img/slides/travelsite-1.png",
+                "thumbnail": "/img/slides/travelsite-1.png"
+            }]
+    },
+    {
+        "project": "hackathon",
+        "background": "/img/slides/hackathon-0.png",
+        "title": "Ron Jeopardy",
+        "tech": "JavaScript",
+        "description": "An interactive game based on Jeopardy - connects to the Jeopardy API for questions and answers",
+        "siteURL": "../Hackathon/index.html",
+        "images": [
+            {
+                "original": "/img/slides/hackathon-0.png",
+                "thumbnail": "/img/slides/hackathon-0.png"
+            },
+            {
+                "original": "/img/slides/hackathon-1.png",
+                "thumbnail": "/img/slides/hackathon-1.png"
+            }]
+    },
+    {
+        "project": "greenly",
+        "background": "/img/slides/greenly-1.png",
+        "title": "Greenly",
+        "tech": "React JS, Chart.js, node js, express, MySQL",
+        "description": "Capstone project for BrainStation web development programme. Single page web application to keep a track of the carbon emissions of everyday activities",
+        "siteURL": "https://greenly-tracker.herokuapp.com/about",
+        "images": [
+            {
+                "original": "/img/slides/greenly-1.png",
+                "thumbnail": "/img/slides/greenly-1.png"
+            },
+            {
+                "original": "/img/slides/greenly-2.png",
+                "thumbnail": "/img/slides/greenly-2.png"
+            },
+            {
+                "original": "/img/slides/greenly-3.png",
+                "thumbnail": "/img/slides/greenly-3.png"
+            },
+            {
+                "original": "/img/slides/greenly-4.png",
+                "thumbnail": "/img/slides/greenly-4.png"
+            },
+            {
+                "original": "/img/slides/greenly-5.png",
+                "thumbnail": "/img/slides/greenly-5.png"
+            },
+            {
+                "original": "/img/slides/greenly-6.png",
+                "thumbnail": "/img/slides/greenly-6.png"
+            },
+            {
+                "original": "/img/slides/greenly-7.png",
+                "thumbnail": "/img/slides/greenly-7.png"
+            },
+            {
+                "original": "/img/slides/greenly-8.png",
+                "thumbnail": "/img/slides/greenly-8.png"
+            }]
+    }
+]

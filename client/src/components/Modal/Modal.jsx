@@ -1,38 +1,7 @@
 import ImageGallery from 'react-image-gallery';
 import './Modal.scss'
 
-const images = [
-  {
-    original: require('../../assets/screenshots/greenly3.png'),
-    thumbnail: require('../../assets/screenshots/greenly3.png'),
-  },
-  {
-    original: require('../../assets/screenshots/greenly4.png'),
-    thumbnail: require('../../assets/screenshots/greenly4.png'),
-  },
-  {
-    original: require('../../assets/screenshots/greenly5.png'),
-    thumbnail: require('../../assets/screenshots/greenly5.png'),
-  },
-  {
-    original: require('../../assets/screenshots/greenly6.png'),
-    thumbnail: require('../../assets/screenshots/greenly6.png'),
-  },
-  {
-    original: require('../../assets/screenshots/greenly7.png'),
-    thumbnail: require('../../assets/screenshots/greenly7.png'),
-  },
-  {
-    original: require('../../assets/screenshots/greenly8.png'),
-    thumbnail: require('../../assets/screenshots/greenly8.png'),
-  },
-  {
-    original: require('../../assets/screenshots/greenly9.png'),
-    thumbnail: require('../../assets/screenshots/greenly9.png'),
-  },
-]
-
-function Modal({ showModal, handleClose }) {
+function Modal({ showModal, handleClose, images, modalProject }) {
   const showHideClassName = showModal ? 'modal__background display-flex' : 'modal__background display-none';
   
   return (
@@ -42,7 +11,7 @@ function Modal({ showModal, handleClose }) {
             <ImageGallery items={images} originalHeight={400} originalWidth={700} showBullets="true"  />
           </div>
           <div className="modal__title">
-            <h1 className="modal__title-text">Site Name</h1>
+            <h1 className="modal__title-text">{modalProject.project}</h1>
           </div>
           <div className="modal__body">
             <p className="modal__body-text">Site description</p>

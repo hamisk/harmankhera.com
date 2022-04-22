@@ -1,26 +1,22 @@
-import { useState } from "react";
-import screenshot from '../../assets/screenshots/greenlyDashboard.png'
-import Modal from '../Modal/Modal'
 import './Preview.scss'
 
-function Preview() {
-
-  const [showModal, setShowModal] = useState(false)
-
-  const hideModal = () => {
-    setShowModal(false)
-  }
+function Preview({ background, title, tech, project, setModalProjectName, setShowModal }) {  
 
   return (
     <div className='preview__container' >
-        <img src={screenshot} alt='screenshot' className='preview__image' />
-        <div className='preview__overlay' onClick={()=>{
-          setShowModal(true)
-          console.log("showModal", showModal)}}>
-            <div className='preview__text'>bare descriptive</div>
+        <img src={background} alt='screenshot' className='preview__image' />
+        <div className='preview__overlay' onClick={()=>{}}>
+            <div className='preview__text'>
+              <h3 className="preview__title">{title}</h3>
+              <p className="preview__tech">{tech}</p>
+              <button className="preview__cta"
+                onClick={() => {
+                  setShowModal(true)
+                  setModalProjectName(project)
+                }}
+                >Learn More</button>
+            </div>
         </div>
-        <Modal showModal={showModal} handleClose={hideModal}/>
-        {/* if openModal === true, then show modal */}
     </div>
   )
 }
