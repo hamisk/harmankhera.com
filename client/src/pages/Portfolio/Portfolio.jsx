@@ -10,6 +10,7 @@ function Portfolio() {
     const [modalProjectName, setModalProjectName] = useState("bandsite")
     
     const modalProject = projects.filter(project => project.project === modalProjectName)
+    projects.sort((a, b) => b.id - a.id)
 
     const hideModal = () => {
         setShowModal(false)
@@ -26,6 +27,7 @@ function Portfolio() {
             <div className="portfolio__grid">
                 {projects.map(project => {
                     return <Preview 
+                    key={project.id}
                     project={project.project}
                     background={project.background}
                     title={project.title}

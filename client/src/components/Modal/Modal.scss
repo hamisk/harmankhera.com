@@ -1,4 +1,4 @@
-@import "~react-image-gallery/styles/scss/image-gallery.scss";
+@import '../../styles/image-gallery.scss';
 
 .modal {
 
@@ -12,18 +12,22 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 1;
+        z-index: 11;
     }
 
     &__container {
         width: 500px;
-        height: 500px;
+        height: 600px;
+        position: fixed;
+        top: 10%;
+        left: calc(50% - 250px);
         border-radius: 12px;
         background-color: white;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         display: flex;
         flex-direction: column;
         padding: 25px;
+        z-index: 12;
     }
 
     &__carousel {

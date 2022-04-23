@@ -1,4 +1,5 @@
 [{
+        "id": 2,
         "project": "bandsite",
         "background": "/img/slides/bandsite-0.jpg",
         "title": "Band Site",
@@ -32,6 +33,7 @@
             }]
     },
     {
+        "id": 0,
         "project": "coffeeshop",
         "background": "/img/slides/coffeeshop-0.png",
         "title": "Coffee Shop",
@@ -39,10 +41,6 @@
         "description": "A responsive website for a local coffee shop.",
         "siteURL": "../CoffeeShop/index.html",
         "images": [
-            {
-                "original": "/img/slides/coffeeshop-0.png",
-                "thumbnail": "/img/slides/coffeeshop-0.png"
-            },
             {
                 "original": "/img/slides/coffeeshop-1.png",
                 "thumbnail": "/img/slides/coffeeshop-1.png"
@@ -58,9 +56,14 @@
             {
                 "original": "/img/slides/coffeeshop-4.png",
                 "thumbnail": "/img/slides/coffeeshop-4.png"
+            },
+            {
+                "original": "/img/slides/coffeeshop-5.png",
+                "thumbnail": "/img/slides/coffeeshop-5.png"
             }]
     },
     {
+        "id": 1,
         "project": "travelsite",
         "background": "/img/slides/travelsite-0.png",
         "title": "Travel Site",
@@ -69,15 +72,16 @@
         "siteURL": "../TravelSite/index.html",
         "images": [
             {
-                "original": "/img/slides/travelsite-0.png",
-                "thumbnail": "/img/slides/travelsite-0.png"
-            },
-            {
                 "original": "/img/slides/travelsite-1.png",
                 "thumbnail": "/img/slides/travelsite-1.png"
+            },
+            {
+                "original": "/img/slides/travelsite-2.png",
+                "thumbnail": "/img/slides/travelsite-2.png"
             }]
     },
     {
+        "id": 4,
         "project": "hackathon",
         "background": "/img/slides/hackathon-0.png",
         "title": "Ron Jeopardy",
@@ -86,38 +90,23 @@
         "siteURL": "../Hackathon/index.html",
         "images": [
             {
-                "original": "/img/slides/hackathon-0.png",
-                "thumbnail": "/img/slides/hackathon-0.png"
-            },
-            {
                 "original": "/img/slides/hackathon-1.png",
                 "thumbnail": "/img/slides/hackathon-1.png"
+            },
+            {
+                "original": "/img/slides/hackathon-2.png",
+                "thumbnail": "/img/slides/hackathon-2.png"
             }]
     },
     {
+        "id": 7,
         "project": "greenly",
-        "background": "/img/slides/greenly-1.png",
+        "background": "/img/slides/greenly-0.png",
         "title": "Greenly",
         "tech": "React JS, Chart.js, node js, express, MySQL",
         "description": "Capstone project for BrainStation web development programme. Single page web application to keep a track of the carbon emissions of everyday activities",
         "siteURL": "https://greenly-tracker.herokuapp.com/about",
         "images": [
-            {
-                "original": "/img/slides/greenly-1.png",
-                "thumbnail": "/img/slides/greenly-1.png"
-            },
-            {
-                "original": "/img/slides/greenly-2.png",
-                "thumbnail": "/img/slides/greenly-2.png"
-            },
-            {
-                "original": "/img/slides/greenly-3.png",
-                "thumbnail": "/img/slides/greenly-3.png"
-            },
-            {
-                "original": "/img/slides/greenly-4.png",
-                "thumbnail": "/img/slides/greenly-4.png"
-            },
             {
                 "original": "/img/slides/greenly-5.png",
                 "thumbnail": "/img/slides/greenly-5.png"
@@ -133,6 +122,70 @@
             {
                 "original": "/img/slides/greenly-8.png",
                 "thumbnail": "/img/slides/greenly-8.png"
+            }]
+    },
+    {
+        "id": 5,
+        "project": "brainflix",
+        "background": "/img/slides/brainflix-0.png",
+        "title": "BrainFlix",
+        "tech": "React JS, Node js, Express, REST API",
+        "description": "Full-stack video streaming site with videos served from API and comments section",
+        "siteURL": "/Brainflix",
+        "images": [
+            {
+                "original": "/img/slides/brainflix-1.png",
+                "thumbnail": "/img/slides/brainflix-1.png"
+            },
+            {
+                "original": "/img/slides/brainflix-2.png",
+                "thumbnail": "/img/slides/brainflix-2.png"
+            },
+            {
+                "original": "/img/slides/brainflix-3.png",
+                "thumbnail": "/img/slides/brainflix-3.png"
+            },
+            {
+                "original": "/img/slides/brainflix-4.png",
+                "thumbnail": "/img/slides/brainflix-4.png"
+            },
+            {
+                "original": "/img/slides/brainflix-5.png",
+                "thumbnail": "/img/slides/brainflix-5.png"
+            }]
+    },
+    {
+        "id": 6,
+        "project": "instock",
+        "background": "/img/slides/instock-0.png",
+        "title": "InStock",
+        "tech": "React JS, Node js, Express, REST API",
+        "description": "Full-stack Inventory Management System built as part of a team using Agile Scrum methodology with Jira.",
+        "siteURL": "/instock",
+        "images": [
+            {
+                "original": "/img/slides/instock-1.png",
+                "thumbnail": "/img/slides/instock-1.png"
+            },
+            {
+                "original": "/img/slides/instock-2.png",
+                "thumbnail": "/img/slides/instock-2.png"
+            },
+            {
+                "original": "/img/slides/instock-3.png",
+                "thumbnail": "/img/slides/instock-3.png"
+            },
+            {
+                "original": "/img/slides/instock-4.png",
+                "thumbnail": "/img/slides/instock-4.png"
+            },
+            {
+                "original": "/img/slides/instock-5.png",
+                "thumbnail": "/img/slides/instock-5.png"
+            },
+            {
+                "original": "/img/slides/instock-6.png",
+                "thumbnail": "/img/slides/instock-6.png"
             }]
     }
 ]

@@ -16,6 +16,8 @@ function App() {
 					<Route path="/coffeeshop" render={() => {window.location.href="index.html"}} />
 					<Route path="/hackathon" render={() => {window.location.href="index.html"}} />
 					<Route path="/travelsite" render={() => {window.location.href="index.html"}} />
+					<Route path="/brainflix" render={() => {window.location.href="index.html"}} />
+					<Route path="/instock" render={() => {window.location.href="index.html"}} />
                 </Routes>
 				<Portfolio />
 			</div>
