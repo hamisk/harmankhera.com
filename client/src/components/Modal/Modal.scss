@@ -31,8 +31,13 @@
     }
 
     &__carousel {
-        height: 400px;
+        height: 50%;
+        overflow: hidden;
         // width: 700px;
+    }
+
+    &__image {
+        height: 400px;
     }
 
     &__title {

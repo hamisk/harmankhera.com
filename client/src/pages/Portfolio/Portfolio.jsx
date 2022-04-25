@@ -7,22 +7,23 @@ const projects = require('../../data/projects.json')
 function Portfolio() {
 
     const [showModal, setShowModal] = useState(false)
-    const [modalProjectName, setModalProjectName] = useState("bandsite")
+    const [modalProjectName, setModalProjectName] = useState(false)
     
-    const modalProject = projects.filter(project => project.project === modalProjectName)
+    const modalProject = projects.filter(project => project.project === modalProjectName)[0]
     projects.sort((a, b) => b.id - a.id)
 
     const hideModal = () => {
         setShowModal(false)
+        setModalProjectName(false)
     }
 
     return (
         <div className='portfolio'>
-            <Modal showModal={showModal} 
+            {modalProjectName ? <Modal showModal={showModal} 
                 handleClose={hideModal}
-                images={modalProject[0].images}
+                images={modalProject.images}
                 modalProject={modalProject}
-                />
+                /> : "" }
             <h2>Projects</h2>
             <div className="portfolio__grid">
                 {projects.map(project => {
