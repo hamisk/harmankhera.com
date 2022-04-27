@@ -1,9 +1,17 @@
 import ImageGallery from 'react-image-gallery';
+import { ImageURLObject, Project } from '../../Project';
 import './Modal.scss'
 
-function Modal({ showModal, handleClose, images, modalProject }) {
-  const showHideBackground = showModal ? 'modal__background display-flex' : 'modal__background display-none';
-  const showHideContainer = showModal ? 'modal__container display-flex' : 'modal__container display-none';
+interface Props {
+  showModal: boolean;
+  handleClose: () => void;
+  images: ImageURLObject[];
+  modalProject: Project;
+}
+
+const Modal: React.FC<Props> = ({ showModal, handleClose, images, modalProject }) => {
+  const showHideBackground: string = showModal ? 'modal__background display-flex' : 'modal__background display-none';
+  const showHideContainer: string = showModal ? 'modal__container display-flex' : 'modal__container display-none';
   console.log(modalProject)
 
   return (

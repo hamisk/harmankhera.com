@@ -1,6 +1,15 @@
 import './Preview.scss'
 
-function Preview({ background, title, tech, project, setModalProjectName, setShowModal }) {  
+interface Props {
+  background: string;
+  title: string;
+  tech: string;
+  projectName: string;
+  setModalProjectName: React.Dispatch<React.SetStateAction<string | boolean>>;
+  setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Preview: React.FC<Props> = ({ background, title, tech, projectName, setModalProjectName, setShowModal }) => {  
 
   return (
     <div className='preview__container' >
@@ -12,7 +21,7 @@ function Preview({ background, title, tech, project, setModalProjectName, setSho
               <button className="preview__cta"
                 onClick={() => {
                   setShowModal(true)
-                  setModalProjectName(project)
+                  setModalProjectName(projectName)
                 }}
                 >Learn More</button>
             </div>

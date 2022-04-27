@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import './NavMenu.scss'
 
-function NavMenu() {
-    const [stickyClass, setStickyClass] = useState('');
-    let intViewportHeight = window.innerHeight;
+const NavMenu: React.FC = () => {
+    const [stickyClass, setStickyClass] = useState<string>('');
+    let intViewportHeight: number = window.innerHeight;
 
     useEffect(() => {
         window.addEventListener('scroll', stickNavbar);

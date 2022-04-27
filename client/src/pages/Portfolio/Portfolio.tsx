@@ -1,13 +1,15 @@
 import './Portfolio.scss'
-import Modal from '../../components/Modal/Modal.jsx'
-import Preview from '../../components/Preview/Preview.jsx'
+import Modal from '../../components/Modal/Modal'
+import Preview from '../../components/Preview/Preview'
 import { useState } from "react";
-const projects = require('../../data/projects.json')
+import { Project } from '../../Project';
 
-function Portfolio() {
+const projects: Project[] = require('../../data/projects.json')
 
-    const [showModal, setShowModal] = useState(false)
-    const [modalProjectName, setModalProjectName] = useState(false)
+const Portfolio: React.FC = () => {
+
+    const [showModal, setShowModal] = useState<boolean>(false)
+    const [modalProjectName, setModalProjectName] = useState<string | boolean>(false)
     
     const modalProject = projects.filter(project => project.project === modalProjectName)[0]
     projects.sort((a, b) => b.id - a.id)
@@ -29,7 +31,7 @@ function Portfolio() {
                 {projects.map(project => {
                     return <Preview 
                     key={project.id}
-                    project={project.project}
+                    projectName={project.project}
                     background={project.background}
                     title={project.title}
                     tech={project.tech}
