@@ -1,0 +1,68 @@
+@import '../../styles/image-gallery.scss';
+
+.modal {
+
+    &__background {
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6);
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 11;
+    }
+
+    &__container {
+        width: 500px;
+        height: 600px;
+        position: fixed;
+        top: 10%;
+        left: calc(50% - 250px);
+        border-radius: 12px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        z-index: 12;
+    }
+
+    &__carousel {
+        height: 50%;
+        overflow: hidden;
+        // width: 700px;
+    }
+
+    &__image {
+        height: 400px;
+    }
+
+    &__title {
+        display: inline-block;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__close {
+        background-color: transparent;
+        border: none;
+        font-size: 25px;
+        cursor: pointer;
+    }
+}
+
+.display-flex {
+    display: flex;
+}
+  
+.display-none {
+    display: none;
+}
