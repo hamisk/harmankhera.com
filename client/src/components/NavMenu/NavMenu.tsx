@@ -17,8 +17,8 @@ const NavMenu: React.FC<Props> = ({ scroll }) => {
 
     const stickNavbar = () => {
         if (window !== undefined) {
-        let windowHeight = window.scrollY;
-        windowHeight > (intViewportHeight) ? setStickyClass('navmenu--sticky') : setStickyClass('');
+            let windowHeight = window.scrollY;
+            windowHeight > (intViewportHeight + 47) ? setStickyClass('navmenu--sticky') : setStickyClass('');
         }
     };
 
@@ -27,7 +27,7 @@ const NavMenu: React.FC<Props> = ({ scroll }) => {
             <Link to={{hash: '#home'}} onClick={() => scroll('#home')}><p className='navmenu__link'>Home</p></Link>
             {/* <Link to="/about"><p className='navmenu__link'>About</p></Link> */}
             <Link to={{hash: '#portfolio'}} onClick={() => scroll('#portfolio')}><p className='navmenu__link'>Portfolio</p></Link>
-            <Link to={{hash: '#contact'}} onClick={() => scroll('#contact')}><p className='navmenu__link'>Contact</p></Link>
+            {/* <Link to={{hash: '#contact'}} onClick={() => scroll('#contact')}><p className='navmenu__link'>Contact</p></Link> */}
         </nav>
     );
 }

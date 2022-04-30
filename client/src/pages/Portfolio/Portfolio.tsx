@@ -40,10 +40,6 @@ const Portfolio: React.FC = () => {
                     />
                 })}
             </div>
-            <a href="../BandSite/index.html">BandSite</a>
-            <a href="../CoffeeShop/index.html">CoffeeShop</a>
-            <a href="../Hackathon/index.html">Hackathon</a>
-            <a href="../TravelSite/index.html">TravelSite</a>
         </div>
     )
 }

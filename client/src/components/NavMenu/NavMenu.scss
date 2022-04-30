@@ -1,11 +1,6 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/colors' as *;
-
-@keyframes slideDown {
-    0% {
-        transform: translateY(-100px);
-    }
-}
+@use '../../styles/partials/keyframes' as *;
 
 .navmenu {
 

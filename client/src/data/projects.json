@@ -103,7 +103,7 @@
         "project": "greenly",
         "background": "/img/slides/greenly-0.png",
         "title": "Greenly",
-        "tech": "React JS, Chart.js, node js, express, MySQL",
+        "tech": "React / Chart.js / Node.js / Express / MySQL",
         "description": "Capstone project for BrainStation web development programme. Single page web application to keep a track of the carbon emissions of everyday activities",
         "siteURL": "https://greenly-tracker.herokuapp.com/about",
         "images": [
@@ -129,7 +129,7 @@
         "project": "brainflix",
         "background": "/img/slides/brainflix-0.png",
         "title": "BrainFlix",
-        "tech": "React JS, Node js, Express, REST API",
+        "tech": "React / Node.js / Express / REST API",
         "description": "Full-stack video streaming site with videos served from API and comments section",
         "siteURL": "/Brainflix",
         "images": [
@@ -159,7 +159,7 @@
         "project": "instock",
         "background": "/img/slides/instock-0.png",
         "title": "InStock",
-        "tech": "React JS, Node js, Express, REST API",
+        "tech": "React / Node.js / Express / REST API",
         "description": "Full-stack Inventory Management System built as part of a team using Agile Scrum methodology with Jira.",
         "siteURL": "/instock",
         "images": [

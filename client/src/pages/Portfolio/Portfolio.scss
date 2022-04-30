@@ -1,3 +1,5 @@
+@use '../../styles/partials/keyframes' as *;
+
 .portfolio {
     display: flex;
     flex-direction: column;
@@ -5,11 +7,19 @@
     align-items: center;
     padding-top: 5rem;
 
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 300;
+        animation: slideRight 1s, fadeIn 1s;
+        animation-delay: 0.5s;
+    }
+
     &__grid {
         width: 95%;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        margin-bottom: 3rem;
     }
 
     &__image {

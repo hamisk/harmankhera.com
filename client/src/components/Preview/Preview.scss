@@ -1,3 +1,6 @@
+@use '../../styles/partials/keyframes' as *;
+@use '../../styles/partials/colors' as *;
+
 .preview {
 
     &__container {
@@ -26,11 +29,50 @@
         bottom: 0;
         right: 0;
         // background-color: #008CBA;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
     }
+
+    &__text {
+        animation: slideDown 0.75s;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+
+    &__tech {
+        color: $color-forest-green;
+
+    }
+
+    &__cta {
+        border: 2px solid forestgreen;
+        // box-shadow: 2px 2px 4px black;
+        height: 3rem;
+        width: 10rem;
+        transition: all 1s;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-bottom: 2rem;
+        border-radius: 4px;
+        text-transform: uppercase;
+        background-color: transparent;
+
+        &:hover {
+            background-color: forestgreen;
+            transition: all 1s;
+            color: white;
+        }
+    }
+
 }
 
 .preview__container:hover .preview__image {
-    opacity: 0.3;
+    opacity: 0.2;
 }
 
 .preview__container:hover .preview__overlay {
