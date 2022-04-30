@@ -20,13 +20,13 @@ const Portfolio: React.FC = () => {
     }
 
     return (
-        <div className='portfolio'>
+        <div className='portfolio' id='portfolio'>
             {modalProjectName ? <Modal showModal={showModal} 
                 handleClose={hideModal}
                 images={modalProject.images}
                 modalProject={modalProject}
                 /> : "" }
-            <h2>Projects</h2>
+            <h2 className='portfolio__title'>Projects</h2>
             <div className="portfolio__grid">
                 {projects.map(project => {
                     return <Preview 

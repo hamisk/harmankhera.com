@@ -5,11 +5,19 @@ import Portfolio from './pages/Portfolio/Portfolio';
 import './App.scss';
 
 const App: React.FC = () => {
+
+	const scroll = (id: string) => {
+        const section = document.querySelector( id );
+        if (section) {
+            section.scrollIntoView( { behavior: 'smooth', block: 'start' } );
+        }
+    };
+
 	return (
 		<BrowserRouter>
 			<div className="App">
-				<Home />
-				<NavMenu />
+				<Home scroll={scroll} />
+				<NavMenu scroll={scroll}/>
 				<Routes>
 					{/* <Route path="/" element={<Home/>} /> */}
 					<Route path="/bandsite" />
