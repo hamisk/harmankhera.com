@@ -1,17 +1,22 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/colors' as *;
+@use '../../styles/partials/keyframes' as *;
 
 .navmenu {
 
     background-color: whitesmoke;
     height: 3rem;
     width: 100%;
+    border-bottom: 2px solid green;
+    position: absolute;
+    bottom: -48px;
 
     &--sticky {
         position: fixed;
         top: 0;
         left: 0;
         z-index: 10;
+        animation: slideDown 0.75s;
     }
 
     @include tablet {

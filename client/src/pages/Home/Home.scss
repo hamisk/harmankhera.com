@@ -1,11 +1,13 @@
+@use '../../styles/partials/colors' as *;
+
 .home {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh + 48px);
     display: flex;
     flex-direction: column;
     // justify-content: center;
     align-items: center;
-    // background-color: rgb(245, 228, 239);
+    background-color: whitesmoke;
     
     &__image {
         width: 50%;
@@ -13,20 +15,32 @@
     }
 
     &__title {
-        
+        margin: 0;
+        font-weight: 300;
+        font-size: 2.5rem;
+    }
+
+    &__name {
+        color: $color-forest-green;
+    }
+
+    &__buttons {
+        display: flex;
+        margin-top: 3rem;
     }
 
     &__cta {
-        border: 2px solid black;
+        border: 2px solid forestgreen;
         box-shadow: 2px 2px 4px black;
         height: 3rem;
         width: 12rem;
         transition: all 1s;
-        font-size: 1.5rem;
-
+        font-size: 1.25rem;
+        cursor: pointer;
+        text-transform: uppercase;
 
         &:hover {
-            background-color: green;
+            background-color: forestgreen;
             transition: all 1s;
             color: white;
         }

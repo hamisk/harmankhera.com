@@ -18,13 +18,13 @@ const Preview: React.FC<Props> = ({ background, title, tech, projectName, setMod
             <div className='preview__text'>
               <h3 className="preview__title">{title}</h3>
               <p className="preview__tech">{tech}</p>
+            </div>
               <button className="preview__cta"
                 onClick={() => {
                   setShowModal(true)
                   setModalProjectName(projectName)
-                }}
-                >Learn More</button>
-            </div>
+                }}>
+                  Learn More</button>
         </div>
     </div>
   )

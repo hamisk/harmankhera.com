@@ -19,14 +19,20 @@ const Portfolio: React.FC = () => {
         setModalProjectName(false)
     }
 
+    const openInNewTab = (url: string): void => {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+        if (newWindow) newWindow.opener = null
+    }
+
     return (
-        <div className='portfolio'>
+        <div className='portfolio' id='portfolio'>
             {modalProjectName ? <Modal showModal={showModal} 
                 handleClose={hideModal}
                 images={modalProject.images}
                 modalProject={modalProject}
+                openInNewTab={openInNewTab}
                 /> : "" }
-            <h2>Projects</h2>
+            <h2 className='portfolio__title'>Projects</h2>
             <div className="portfolio__grid">
                 {projects.map(project => {
                     return <Preview 
@@ -40,10 +46,6 @@ const Portfolio: React.FC = () => {
                     />
                 })}
             </div>
-            <a href="../BandSite/index.html">BandSite</a>
-            <a href="../CoffeeShop/index.html">CoffeeShop</a>
-            <a href="../Hackathon/index.html">Hackathon</a>
-            <a href="../TravelSite/index.html">TravelSite</a>
         </div>
     )
 }

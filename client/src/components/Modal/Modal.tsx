@@ -1,5 +1,7 @@
 import ImageGallery from 'react-image-gallery';
 import { ImageURLObject, Project } from '../../Project';
+import openInNewBlack from '../../assets/icons/open_in_new_black_24dp.svg'
+import openInNewWhite from '../../assets/icons/open_in_new_white_24dp.svg'
 import './Modal.scss'
 
 interface Props {
@@ -7,11 +9,13 @@ interface Props {
   handleClose: () => void;
   images: ImageURLObject[];
   modalProject: Project;
+  openInNewTab: (url: string) => void;
 }
 
-const Modal: React.FC<Props> = ({ showModal, handleClose, images, modalProject }) => {
+const Modal: React.FC<Props> = ({ showModal, handleClose, images, modalProject, openInNewTab }) => {
   const showHideBackground: string = showModal ? 'modal__background display-flex' : 'modal__background display-none';
   const showHideContainer: string = showModal ? 'modal__container display-flex' : 'modal__container display-none';
+  const enableLink = modalProject.enableLink
   console.log(modalProject)
 
   return (
@@ -19,8 +23,8 @@ const Modal: React.FC<Props> = ({ showModal, handleClose, images, modalProject }
     <div className={showHideBackground} onClick={()=>{handleClose()}}></div>
         <div className={showHideContainer}>
           <div className="modal__carousel">
-            <ImageGallery items={images} showBullets="true" showThumbnails={false} />
-            {/* <img src={images[0].original} alt="modal" className='modal__image' /> */}
+            {/* <ImageGallery items={images} showBullets="true" showThumbnails={false} /> */}
+            <img src={images[0].original} alt="modal" className='modal__image' />
           </div>
           <div className="modal__title">
             <h1 className="modal__title-text">{modalProject.title}</h1>
@@ -29,7 +33,11 @@ const Modal: React.FC<Props> = ({ showModal, handleClose, images, modalProject }
             <p className="modal__body-text">{modalProject.description}</p>
           </div>
           <div className="modal__footer">
-            <button className="modal__cta"><a href={modalProject.siteURL} className="modal__link">Visit Site</a></button>
+            {enableLink ? <button className="modal__cta" onClick={() => openInNewTab(modalProject.siteURL)}>
+              <p className="modal__cta-text">
+                <img src={openInNewBlack} alt="open in new icon" className="modal__open-icon" /> Visit Site
+              </p>
+            </button> : ""}
             <button className="modal__close" onClick={()=>{handleClose()}}> X </button>
           </div>
         </div>
