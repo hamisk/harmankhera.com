@@ -8,14 +8,14 @@ const projects: Project[] = require('../../data/projects.json')
 
 const Portfolio: React.FC = () => {
 
-    const [showModal, setShowModal] = useState<boolean>(false)
+    // const [showModal, setShowModal] = useState<boolean>(false)
     const [modalProjectName, setModalProjectName] = useState<string | boolean>(false)
     
-    const modalProject = projects.filter(project => project.project === modalProjectName)[0]
+    // const modalProject = projects.filter(project => project.project === modalProjectName)[0]
     projects.sort((a, b) => b.id - a.id)
 
     const hideModal = () => {
-        setShowModal(false)
+        // setShowModal(false)
         setModalProjectName(false)
     }
 
@@ -26,12 +26,13 @@ const Portfolio: React.FC = () => {
 
     return (
         <div className='portfolio' id='portfolio'>
-            {modalProjectName ? <Modal showModal={showModal} 
+            {projects.map(modalProject => {
+                return <Modal showModal={modalProject.project === modalProjectName} 
                 handleClose={hideModal}
                 images={modalProject.images}
                 modalProject={modalProject}
                 openInNewTab={openInNewTab}
-                /> : "" }
+                />})}
             <h2 className='portfolio__title'>Projects</h2>
             <div className="portfolio__grid">
                 {projects.map(project => {
@@ -42,7 +43,7 @@ const Portfolio: React.FC = () => {
                     title={project.title}
                     tech={project.tech}
                     setModalProjectName={setModalProjectName}
-                    setShowModal={setShowModal}
+                    // setShowModal={setShowModal}
                     />
                 })}
             </div>

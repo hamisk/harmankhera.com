@@ -28,6 +28,9 @@
         flex-direction: column;
         padding: 25px;
         z-index: 12;
+        // for transition:
+        transform: scale(0.8);
+        opacity: 0;
     }
 
     &__carousel {
@@ -112,14 +115,15 @@
     }
 }
 
-.display-flex {
-    display: flex;
+.display-show {
+    visibility: visible;
     transform: scale(1);
-    transition: all 0.3s ease;
+    opacity: 1;
+    transition: all 0.3s;
 }
   
-.display-none {
-    display: none;
-    transform: scale(0.8);
-    transition: all 0.3s ease;
+.display-hide {
+    visibility: hidden;
+    transition: all 0.3s;
+    opacity: 0;
 }

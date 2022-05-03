@@ -6,10 +6,10 @@ interface Props {
   tech: string;
   projectName: string;
   setModalProjectName: React.Dispatch<React.SetStateAction<string | boolean>>;
-  setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
+  // setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Preview: React.FC<Props> = ({ background, title, tech, projectName, setModalProjectName, setShowModal }) => {  
+const Preview: React.FC<Props> = ({ background, title, tech, projectName, setModalProjectName }) => {  
 
   return (
     <div className='preview__container' >
@@ -21,7 +21,7 @@ const Preview: React.FC<Props> = ({ background, title, tech, projectName, setMod
             </div>
               <button className="preview__cta"
                 onClick={() => {
-                  setShowModal(true)
+                  // setShowModal(true)
                   setModalProjectName(projectName)
                 }}>
                   Learn More</button>

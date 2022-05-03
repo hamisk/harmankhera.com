@@ -13,8 +13,8 @@ interface Props {
 }
 
 const Modal: React.FC<Props> = ({ showModal, handleClose, images, modalProject, openInNewTab }) => {
-  const showHideBackground: string = showModal ? 'modal__background display-flex' : 'modal__background display-none';
-  const showHideContainer: string = showModal ? 'modal__container display-flex' : 'modal__container display-none';
+  const showHideBackground: string = showModal ? 'modal__background display-show' : 'modal__background display-hide';
+  const showHideContainer: string = showModal ? 'modal__container display-show' : 'modal__container display-hide';
   const enableLink = modalProject.enableLink
   console.log(modalProject)
 
@@ -23,8 +23,8 @@ const Modal: React.FC<Props> = ({ showModal, handleClose, images, modalProject, 
     <div className={showHideBackground} onClick={()=>{handleClose()}}></div>
         <div className={showHideContainer}>
           <div className="modal__carousel">
-            {/* <ImageGallery items={images} showBullets="true" showThumbnails={false} /> */}
-            <img src={images[0].original} alt="modal" className='modal__image' />
+            <ImageGallery items={images} showBullets="true" showThumbnails={false} />
+            {/* <img src={images[0].original} alt="modal" className='modal__image' /> */}
           </div>
           <div className="modal__title">
             <h1 className="modal__title-text">{modalProject.title}</h1>
