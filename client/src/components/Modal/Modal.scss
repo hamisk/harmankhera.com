@@ -54,11 +54,12 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+        height: 3rem;
     }
 
     &__cta {
         border: 2px solid forestgreen;
-        // box-shadow: 2px 2px 4px black;
         height: 3rem;
         width: 10rem;
         transition: all 1s;
@@ -71,16 +72,27 @@
         &:hover {
             background-color: forestgreen;
             transition: all 1s;
-            color: white;
         }
     }
 
-    &__link {
+    &__cta-text {
         color: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        // padding: 0.5rem 1rem;
+        width: 100%;
+        height: 100%;
         &:hover {
             transition: all 1s;
-            color: white;
+            filter: invert(100%) sepia(0%) saturate(7410%) hue-rotate(146deg) brightness(121%) contrast(121%);
         }
+    }
+
+    &__open-icon {
+        width: 1.5rem;
+        margin-right: 0.5rem;
     }
 
     &__close {
@@ -89,6 +101,9 @@
         font-size: 25px;
         cursor: pointer;
         transition: all 1s;
+        position: absolute;
+        right: 0;
+        bottom: 0.5rem;
         &:hover {
             transition: all 1s ease;
             color: forestgreen;

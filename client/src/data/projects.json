@@ -6,6 +6,7 @@
         "tech": "JavaScript",
         "description": "An interactive and responsive website for an up-and-coming band.",
         "siteURL": "../BandSite/index.html",
+        "enableLink": true,
         "images": [
             {
                 "original": "/img/slides/bandsite-1.png",
@@ -40,6 +41,7 @@
         "tech": "HTML / SCSS",
         "description": "A responsive website for a local coffee shop.",
         "siteURL": "../CoffeeShop/index.html",
+        "enableLink": true,
         "images": [
             {
                 "original": "/img/slides/coffeeshop-1.png",
@@ -70,6 +72,7 @@
         "tech": "HTML / CSS",
         "description": "A responsive website for a local travel agency.",
         "siteURL": "../TravelSite/index.html",
+        "enableLink": true,
         "images": [
             {
                 "original": "/img/slides/travelsite-1.png",
@@ -88,6 +91,7 @@
         "tech": "JavaScript",
         "description": "An interactive game based on Jeopardy - connects to the Jeopardy API for questions and answers",
         "siteURL": "../Hackathon/index.html",
+        "enableLink": true,
         "images": [
             {
                 "original": "/img/slides/hackathon-1.png",
@@ -106,6 +110,7 @@
         "tech": "React / Chart.js / Node.js / Express / MySQL",
         "description": "Capstone project for BrainStation web development programme. Single page web application to keep a track of the carbon emissions of everyday activities",
         "siteURL": "https://greenly-tracker.herokuapp.com/about",
+        "enableLink": true,
         "images": [
             {
                 "original": "/img/slides/greenly-5.png",
@@ -132,6 +137,7 @@
         "tech": "React / Node.js / Express / REST API",
         "description": "Full-stack video streaming site with videos served from API and comments section",
         "siteURL": "/Brainflix",
+        "enableLink": false,
         "images": [
             {
                 "original": "/img/slides/brainflix-1.png",
@@ -162,6 +168,7 @@
         "tech": "React / Node.js / Express / REST API",
         "description": "Full-stack Inventory Management System built as part of a team using Agile Scrum methodology with Jira.",
         "siteURL": "/instock",
+        "enableLink": false,
         "images": [
             {
                 "original": "/img/slides/instock-1.png",

@@ -11,5 +11,6 @@ export interface Project{
     tech: string;
     description: string;
     siteURL: string;
+    enableLink: boolean;
     images: ImageURLObject[];
 }

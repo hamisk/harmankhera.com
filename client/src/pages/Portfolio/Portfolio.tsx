@@ -19,12 +19,18 @@ const Portfolio: React.FC = () => {
         setModalProjectName(false)
     }
 
+    const openInNewTab = (url: string): void => {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+        if (newWindow) newWindow.opener = null
+    }
+
     return (
         <div className='portfolio' id='portfolio'>
             {modalProjectName ? <Modal showModal={showModal} 
                 handleClose={hideModal}
                 images={modalProject.images}
                 modalProject={modalProject}
+                openInNewTab={openInNewTab}
                 /> : "" }
             <h2 className='portfolio__title'>Projects</h2>
             <div className="portfolio__grid">
