@@ -35,7 +35,7 @@ const Portfolio: React.FC = () => {
                 />})}
             <h2 className='portfolio__title'>Projects</h2>
             <div className="portfolio__grid">
-                {projects.map(project => {
+                {projects.map((project, index) => {
                     return <Preview 
                     key={project.id}
                     projectName={project.project}
@@ -43,6 +43,7 @@ const Portfolio: React.FC = () => {
                     title={project.title}
                     tech={project.tech}
                     setModalProjectName={setModalProjectName}
+                    style={{transitionDelay: `${0.25*index}s`}}
                     // setShowModal={setShowModal}
                     />
                 })}

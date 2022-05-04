@@ -1,7 +1,6 @@
 import ImageGallery from 'react-image-gallery';
 import { ImageURLObject, Project } from '../../Project';
 import openInNewBlack from '../../assets/icons/open_in_new_black_24dp.svg'
-import openInNewWhite from '../../assets/icons/open_in_new_white_24dp.svg'
 import './Modal.scss'
 
 interface Props {
