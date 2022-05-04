@@ -6,13 +6,14 @@ interface Props {
   tech: string;
   projectName: string;
   setModalProjectName: React.Dispatch<React.SetStateAction<string | boolean>>;
+  style: {transitionDelay: string}
   // setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Preview: React.FC<Props> = ({ background, title, tech, projectName, setModalProjectName }) => {  
+const Preview: React.FC<Props> = ({ background, title, tech, projectName, setModalProjectName, style }) => {  
 
   return (
-    <div className='preview__container' >
+    <div className='preview__container' style={style}>
         <img src={background} alt='screenshot' className='preview__image' />
         <div className='preview__overlay' onClick={()=>{}}>
             <div className='preview__text'>
