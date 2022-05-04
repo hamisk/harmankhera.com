@@ -95,3 +95,14 @@
     opacity: 1;
     transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
 }
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
