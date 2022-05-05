@@ -15,7 +15,6 @@ const Modal: React.FC<Props> = ({ showModal, handleClose, images, modalProject, 
   const showHideBackground: string = showModal ? 'modal__background display-show' : 'modal__background display-hide';
   const showHideContainer: string = showModal ? 'modal__container display-show' : 'modal__container display-hide';
   const enableLink = modalProject.enableLink
-  console.log(modalProject)
 
   return (
     <>
