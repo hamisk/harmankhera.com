@@ -12,29 +12,21 @@ const Portfolio: React.FC = () => {
     const [modalProjectName, setModalProjectName] = useState<string | boolean>(false)
 
     // using ref to ref portfolio div
+    // to find position of top of portfolio div to animate on scroll
     const portfolioRef = useRef<HTMLDivElement>(null)
-    // finding position of top of portfolio div to animate on scroll
-    const [topPos, setTopPos] = useState(portfolioRef?.current?.getBoundingClientRect().top)
+    const [activeClass, setActiveClass] = useState('')
 
     useLayoutEffect(() => {
         window.addEventListener('scroll', onScroll)
-        console.log(portfolioRef)
-        console.log(portfolioRef.current.getBoundingClientRect().top)
-        setTopPos(portfolioRef.current.getBoundingClientRect().top)
-        console.log(topPos)
-
         return () => window.removeEventListener('scroll', onScroll)
     }, [])
 
     const onScroll = () => {
         const scrollPos = window.scrollY + window.innerHeight
+        const topPos = portfolioRef.current?.getBoundingClientRect().top
         console.log(scrollPos)
         console.log(topPos)
-        if (topPos && topPos < scrollPos) {
-            return "portfolio__grid reveal active"
-        } else {
-            return "portfolio__grid reveal"
-        }
+        topPos && topPos + 50 < scrollPos ? setActiveClass('active') : setActiveClass('')
     }
 
     // const modalProject = projects.filter(project => project.project === modalProjectName)[0]
@@ -58,9 +50,10 @@ const Portfolio: React.FC = () => {
                 images={modalProject.images}
                 modalProject={modalProject}
                 openInNewTab={openInNewTab}
+                key={modalProject.id + 100}
                 />})}
             <h2 className='portfolio__title'>Projects</h2>
-            <div className={onScroll()} ref={portfolioRef}>
+            <div className={`portfolio__grid reveal ${activeClass}`} ref={portfolioRef}>
                 {projects.map((project, index) => {
                     return <Preview 
                     key={project.id}
