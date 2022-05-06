@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavMenu from './components/NavMenu/NavMenu';
 import Home from './pages/Home/Home';
 import Portfolio from './pages/Portfolio/Portfolio';
+import Button from './components/Button/Button.js'
 import './App.scss';
 
 const App: React.FC = () => {
@@ -28,6 +29,7 @@ const App: React.FC = () => {
 					<Route path="/instock" />
 				</Routes>
 				<Portfolio />
+				<Button label="click here"></Button>
 			</div>
 		</BrowserRouter>
 	);
