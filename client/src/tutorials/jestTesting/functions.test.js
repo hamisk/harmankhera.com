@@ -1,5 +1,33 @@
 const functions = require('./functions');
 
+// can run tests like lifecycle functions, eg initialising a database
+// before you use functions on it
+// can run functions before and after each test:
+// const initDatabase = () => console.log('database initialised...')
+// const closeDatabase = () => console.log('database closed')
+
+// beforeEach(() => initDatabase()) //will run before each test
+// afterEach(() => closeDatabase())
+
+// beforeAll(() => initDatabase()) //will run before all
+// afterAll(() => closeDatabase())
+
+const nameCheck = () =>  console.log('Checking name...')
+
+// can also target a specific test with describe()
+describe('Checking Names', () => {
+    beforeEach(() => nameCheck())
+    const user = 'Jeff'
+    test('User is Jeff', () => {
+        expect(user).toBe('Jeff')
+    })
+    test('User is Karen', () => {
+        expect(user).not.toBe('Karen')
+    })
+
+    // will only run nameCheck() for these tests within this describe
+})
+
 // toBe
 test('Adds 2 + 2 to equal 4', () => {
     expect(functions.add(2, 2)).toBe(4);
