@@ -4,6 +4,7 @@ import Home from './pages/Home/Home';
 import Portfolio from './pages/Portfolio/Portfolio';
 import Button from './components/Button/Button.js'
 import './App.scss';
+import Tutorials from './pages/Tutorials/Tutorials';
 
 const App: React.FC = () => {
 
@@ -17,18 +18,20 @@ const App: React.FC = () => {
 	return (
 		<BrowserRouter>
 			<div className="App">
-				<Home scroll={scroll} />
+				{/* <Home scroll={scroll} /> */}
 				<NavMenu scroll={scroll}/>
 				<Routes>
-					{/* <Route path="/" element={<Home/>} /> */}
+					<Route path="/" element={<><Home scroll={scroll}/> <Portfolio /></>} />
+					<Route path='/portfolio' element={ <Portfolio /> } />
 					<Route path="/bandsite" />
 					<Route path="/coffeeshop" />
 					<Route path="/hackathon" />
 					<Route path="/travelsite" />
 					<Route path="/brainflix" />
 					<Route path="/instock" />
+					<Route path="/tutorials" element={ <Tutorials/> } />
 				</Routes>
-				<Portfolio />
+				
 			</div>
 		</BrowserRouter>
 	);
