@@ -12,12 +12,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 11;
+        z-index: -99;
+        opacity: 0;
     }
 
     &__container {
         width: 500px;
-        // height: 500px;
+        height: 0;
+        overflow: hidden;
         position: fixed;
         top: 10%;
         left: calc(50% - 250px);
@@ -116,14 +118,24 @@
 }
 
 .display-show {
-    visibility: visible;
+    height: auto;
+    // visibility: visible;
     transform: scale(1);
     opacity: 1;
-    transition: all 0.3s;
+    transition: transform 0.3s;
+}
+
+.display-show-bg {
+    height: 100vh;
+    // visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+    z-index: 10;
+    transition: transform 0.3s, opacity 0.3s;
 }
   
 .display-hide {
-    visibility: hidden;
-    transition: all 0.3s;
+    // visibility: hidden;
     opacity: 0;
+    transition: opacity 1s, visibility 0.3s 0.3s;
 }

@@ -12,7 +12,7 @@ interface Props {
 }
 
 const Modal: React.FC<Props> = ({ showModal, handleClose, images, modalProject, openInNewTab }) => {
-  const showHideBackground: string = showModal ? 'modal__background display-show' : 'modal__background display-hide';
+  const showHideBackground: string = showModal ? 'modal__background display-show-bg' : 'modal__background display-hide';
   const showHideContainer: string = showModal ? 'modal__container display-show' : 'modal__container display-hide';
   const enableLink = modalProject.enableLink
 

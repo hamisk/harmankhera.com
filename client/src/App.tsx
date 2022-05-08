@@ -29,7 +29,6 @@ const App: React.FC = () => {
 					<Route path="/instock" />
 				</Routes>
 				<Portfolio />
-				<Button label="click here"></Button>
 			</div>
 		</BrowserRouter>
 	);
