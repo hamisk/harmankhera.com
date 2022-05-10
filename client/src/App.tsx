@@ -5,6 +5,7 @@ import Portfolio from './pages/Portfolio/Portfolio';
 import Button from './components/Button/Button.js'
 import './App.scss';
 import Tutorials from './pages/Tutorials/Tutorials';
+import ToDo from './pages/ToDo/ToDo';
 
 const App: React.FC = () => {
 
@@ -30,6 +31,7 @@ const App: React.FC = () => {
 					<Route path="/brainflix" />
 					<Route path="/instock" />
 					<Route path="/tutorials" element={ <Tutorials/> } />
+					<Route path="/todo" element={ <ToDo/> } />
 				</Routes>
 				
 			</div>
