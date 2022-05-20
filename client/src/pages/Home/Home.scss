@@ -1,48 +1,86 @@
 @use '../../styles/partials/colors' as *;
 
 .home {
-    width: 100%;
-    height: calc(100vh + 48px);
+  background: url('../../assets/images/forest-background-crop-compressed.jpeg') no-repeat center top;
+  background-size: cover;
+  //   @media (min-width: 768px) {
+  //     background: url('my-hero-image.jpg') no-repeat center top;
+  //   }
+  width: 100%;
+  height: calc(100vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  background-color: whitesmoke;
+  position: relative;
+  overflow: hidden;
+
+  &__image {
+    width: 50%;
+    max-width: 550px;
+  }
+
+  &__title {
+    margin: 1rem 3rem;
+    font-weight: 300;
+    font-size: 2.5rem;
+    width: fit-content;
+    color: white;
+  }
+
+  &__job-title {
+    @extend .home__title;
+    font-size: 3.5rem;
+    font-weight: 600;
+  }
+
+  &__name {
+    // color: $color-forest-green;
+  }
+
+  &__buttons {
     display: flex;
-    flex-direction: column;
-    // justify-content: center;
-    align-items: center;
-    background-color: whitesmoke;
-    
-    &__image {
-        width: 50%;
-        max-width: 550px;
-    }
+    margin-top: 3rem;
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    position: relative;
+  }
 
-    &__title {
-        margin: 0;
-        font-weight: 300;
-        font-size: 2.5rem;
-    }
+  &__cta {
+    margin: 1rem;
+    // border: 2px solid forestgreen;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px black;
+    height: 3rem;
+    width: 12rem;
+    transition: all 1s;
+    font-size: 1.25rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: white;
+    background: transparent;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 
-    &__name {
-        color: $color-forest-green;
+    &:hover {
+      background-color: black;
+      transition: all 1s;
+      color: white;
     }
+  }
 
-    &__buttons {
-        display: flex;
-        margin-top: 3rem;
-    }
-
-    &__cta {
-        border: 2px solid forestgreen;
-        box-shadow: 2px 2px 4px black;
-        height: 3rem;
-        width: 12rem;
-        transition: all 1s;
-        font-size: 1.25rem;
-        cursor: pointer;
-        text-transform: uppercase;
-
-        &:hover {
-            background-color: forestgreen;
-            transition: all 1s;
-            color: white;
-        }
-    }
+  //   &__button-bg {
+  //     background: black;
+  //     // opacity: 0.5;
+  //     width: 100%;
+  //     height: 100%;
+  //     position: absolute;
+  //     z-index: -1;
+  //     top: 0;
+  //     bottom: 0;
+  //     left: 0;
+  //     right: 0;
+  //   }
 }

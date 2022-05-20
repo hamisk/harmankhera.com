@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-interface ToDoProps {
-    
-}
+type Props = {};
 
-export const ToDo: React.FC<ToDoProps> = ({}) => {
-    return (
-        <div> yo </div>
-    );
+export default function ToDo({}: Props) {
+  return <div>ToDo</div>;
 }

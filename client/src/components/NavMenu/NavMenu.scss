@@ -3,30 +3,33 @@
 @use '../../styles/partials/keyframes' as *;
 
 .navmenu {
+  //   background-color: whitesmoke;
+  height: 3rem;
+  width: 100%;
+  border-bottom: 2px solid green;
+  position: absolute;
+  bottom: -48px;
+  z-index: 1;
+  background: transparent;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 
-    background-color: whitesmoke;
-    height: 3rem;
-    width: 100%;
-    border-bottom: 2px solid green;
-    position: absolute;
-    bottom: -48px;
+  &--sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    // animation: slideDown 0.75s;
+  }
 
-    &--sticky {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 10;
-        animation: slideDown 0.75s;
-    }
+  @include tablet {
+    display: flex;
+    align-items: center;
+  }
 
-    @include tablet {
-        display: flex;
-        align-items: center;
-    }
-
-    &__link {
-        margin: 0 1rem;
-        color: $color-black-olive;
-        font-size: 1.5rem;
-    }
+  &__link {
+    margin: 0 1rem;
+    // color: $color-black-olive;
+    color: white;
+    font-size: 1.5rem;
+  }
 }

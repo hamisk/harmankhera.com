@@ -1,7 +1,9 @@
 @use './styles/partials/colors' as *;
+@use './styles/partials/fonts' as *;
 
 * {
   box-sizing: border-box;
+  font-family: 'Montserrat', 'sans-serif';
 }
 
 body {
