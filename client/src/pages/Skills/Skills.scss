@@ -1,14 +1,51 @@
 @use '../../styles/partials/keyframes' as *;
+@use '../../styles/partials/colors' as *;
 
 .skills {
   padding: 2rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  color: whitesmoke;
 
   &__title {
+    color: whitesmoke;
     font-size: 2.5rem;
     font-weight: 300;
     animation: slideRight 1s, fadeIn 1s;
     animation-delay: 0.5s;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.skillcard {
+  width: 18rem;
+  height: 22rem;
+  margin: 1rem;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__icon {
+    width: 4rem;
+    margin: 2rem;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__list-item {
+    list-style: none;
+    margin: 0.25rem;
   }
 }
