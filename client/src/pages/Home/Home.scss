@@ -1,4 +1,5 @@
 @use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
 
 .home {
   background: url('../../assets/images/forest-background-crop-compressed.jpeg') no-repeat center top;
@@ -20,17 +21,25 @@
   }
 
   &__title {
-    margin: 1rem 3rem;
+    text-align: left;
+    margin: 1rem 2rem;
     font-weight: 300;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     width: fit-content;
     color: white;
+    @include tablet {
+      margin: 1rem 3rem;
+      font-size: 2.5rem;
+    }
   }
 
   &__job-title {
     @extend .home__title;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: 600;
+    @include tablet {
+      font-size: 3.5rem;
+    }
   }
 
   &__name {
@@ -39,11 +48,18 @@
 
   &__buttons {
     display: flex;
-    margin-top: 3rem;
+    flex-direction: column;
+    margin-top: 1rem;
+    align-items: flex-start;
     position: absolute;
-    bottom: 2rem;
-    left: 2rem;
-    position: relative;
+    bottom: 1rem;
+
+    @include tablet {
+      flex-direction: row;
+      // position: relative;
+      bottom: 2rem;
+      left: 2rem;
+    }
   }
 
   &__cta {
