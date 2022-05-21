@@ -29,11 +29,15 @@ const NavMenu: React.FC<Props> = ({ scroll }) => {
       <Link to={{ hash: '#home' }} onClick={() => scroll('#home')}>
         <p className='navmenu__link'>Home</p>
       </Link>
-      {/* <Link to="/about"><p className='navmenu__link'>About</p></Link> */}
+      <Link to={{ hash: '#about' }} onClick={() => scroll('#about')}>
+        <p className='navmenu__link'>About</p>
+      </Link>
+      <Link to={{ hash: '#skills' }} onClick={() => scroll('#skills')}>
+        <p className='navmenu__link'>Skills</p>
+      </Link>
       <Link to={{ hash: '#portfolio' }} onClick={() => scroll('#portfolio')}>
         <p className='navmenu__link'>Portfolio</p>
       </Link>
-      {/* <Link to={{hash: '#contact'}} onClick={() => scroll('#contact')}><p className='navmenu__link'>Contact</p></Link> */}
     </nav>
   );
 };
