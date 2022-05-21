@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import hk_transparent from '../../assets/images/hk_transparent.png';
 import './NavMenu.scss';
 
 interface Props {
@@ -24,6 +25,7 @@ const NavMenu: React.FC<Props> = ({ scroll }) => {
 
   return (
     <nav className={`navmenu ${stickyClass}`}>
+      <img src={hk_transparent} alt='webdev' className='navmenu__image' />
       <Link to={{ hash: '#home' }} onClick={() => scroll('#home')}>
         <p className='navmenu__link'>Home</p>
       </Link>
