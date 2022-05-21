@@ -3,9 +3,6 @@
 .home {
   background: url('../../assets/images/forest-background-crop-compressed.jpeg') no-repeat center top;
   background-size: cover;
-  //   @media (min-width: 768px) {
-  //     background: url('my-hero-image.jpg') no-repeat center top;
-  //   }
   width: 100%;
   height: calc(100vh);
   display: flex;
@@ -50,7 +47,6 @@
 
   &__cta {
     margin: 1rem;
-    // border: 2px solid forestgreen;
     border: none;
     border-radius: 4px;
     box-shadow: 2px 2px 4px black;
