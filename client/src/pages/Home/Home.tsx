@@ -1,5 +1,6 @@
 import './Home.scss';
 import Button from '../../components/Button/Button';
+import bg_forest from '../../assets/images/forest-background-crop-compressed.jpeg';
 
 interface Props {
   scroll: (id: string) => void;
@@ -8,6 +9,7 @@ interface Props {
 const Home: React.FC<Props> = ({ scroll }) => {
   return (
     <div className='home' id='home'>
+      <img src={bg_forest} alt='forest background' className='home__bg-image' />
       <h1 className='home__title'>
         Hi, I'm <span className='home__name'>Harman Khera</span>
       </h1>
