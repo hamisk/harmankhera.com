@@ -1,5 +1,4 @@
 import './Home.scss';
-import hk_transparent from '../../assets/images/hk_transparent.png';
 import Button from '../../components/Button/Button';
 
 interface Props {
@@ -9,8 +8,6 @@ interface Props {
 const Home: React.FC<Props> = ({ scroll }) => {
   return (
     <div className='home' id='home'>
-      {/* <img src={hk_transparent} alt='webdev' className="home__image" /> */}
-
       <h1 className='home__title'>
         Hi, I'm <span className='home__name'>Harman Khera</span>
       </h1>

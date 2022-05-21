@@ -20,5 +20,3 @@ function Button({ onClick, onClickText, label }: Props) {
 }
 
 export default Button;
-
-// data is a special attribute of html

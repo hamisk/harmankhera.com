@@ -6,12 +6,25 @@ interface Props {
   title: string;
   tech: string;
   projectName: string;
-  setModalProjectName: React.Dispatch<React.SetStateAction<string | boolean>>;
+  setModalProjectName?: React.Dispatch<React.SetStateAction<string | boolean>>;
   style: { transitionDelay: string };
+  openInNewTab: any;
+  siteUrl: string;
+  showButton: boolean;
   // setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Preview: React.FC<Props> = ({ background, title, tech, projectName, setModalProjectName, style }) => {
+const Preview: React.FC<Props> = ({
+  background,
+  title,
+  tech,
+  projectName,
+  setModalProjectName,
+  style,
+  openInNewTab,
+  siteUrl,
+  showButton,
+}) => {
   return (
     <div className='preview__container' style={style}>
       <img src={background} alt='screenshot' className='preview__image' />
@@ -20,15 +33,7 @@ const Preview: React.FC<Props> = ({ background, title, tech, projectName, setMod
           <h3 className='preview__title'>{title}</h3>
           <p className='preview__tech'>{tech}</p>
         </div>
-        {/* <button
-          className='preview__cta'
-          onClick={() => {
-            // setShowModal(true)
-            setModalProjectName(projectName);
-          }}>
-          Learn More
-        </button> */}
-        <Button onClick={setModalProjectName} onClickText={projectName} label='Learn more' />
+        {showButton ? <Button onClick={openInNewTab} onClickText={siteUrl} label='visit site' /> : ''}
       </div>
     </div>
   );
