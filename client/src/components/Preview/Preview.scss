@@ -1,15 +1,24 @@
 @use '../../styles/partials/keyframes' as *;
 @use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
 
 .preview {
   &__container {
     color: whitesmoke;
-    width: 32%;
-    margin: 0.5rem;
+    width: 100%;
+    height: fit-content;
+    margin: 1rem;
     overflow: hidden;
     position: relative;
     border-radius: 4px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include tablet {
+      width: 45%;
+      margin: 0.5rem;
+    }
   }
 
   &__image {
@@ -28,8 +37,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
     right: 0;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

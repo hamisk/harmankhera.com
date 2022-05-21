@@ -1,4 +1,5 @@
 @use '../../styles/partials/keyframes' as *;
+@use '../../styles/partials/mixins' as *;
 
 .portfolio {
   display: flex;
@@ -15,11 +16,16 @@
   }
 
   &__grid {
-    width: 95%;
+    width: 90%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
     margin-bottom: 3rem;
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 
   &__image {
