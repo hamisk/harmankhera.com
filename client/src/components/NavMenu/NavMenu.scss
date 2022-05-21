@@ -3,16 +3,21 @@
 @use '../../styles/partials/keyframes' as *;
 
 .navmenu {
-  //   background-color: whitesmoke;
   height: 4rem;
   width: 100%;
-  // border-bottom: 2px solid green;
   box-shadow: 0 1px 3px black;
   position: absolute;
-  bottom: -64px;
+  bottom: -4rem;
   z-index: 1;
   background: transparent;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  display: flex;
+  justify-content: center;
+
+  @include tablet {
+    justify-content: flex-start;
+    align-items: center;
+  }
 
   &--sticky {
     position: fixed;
@@ -22,20 +27,45 @@
     // animation: slideDown 0.75s;
   }
 
+  &__links-wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+      margin-left: 6rem;
+      height: 100%;
+      overflow: unset;
+    }
+  }
+
   &__image {
     height: 100%;
     width: auto;
-  }
-
-  @include tablet {
-    display: flex;
-    align-items: center;
+    position: absolute;
+    left: 2rem;
   }
 
   &__link {
     margin: 0 1rem;
     // color: $color-black-olive;
     color: white;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    @include tablet {
+      font-size: 1.5rem;
+    }
+    &:first-of-type {
+      margin-top: 0.75rem;
+      @include tablet {
+        margin-top: 0;
+      }
+    }
+    &:last-of-type {
+      margin-bottom: 0.75rem;
+      @include tablet {
+        margin-bottom: 0;
+      }
+    }
   }
 }

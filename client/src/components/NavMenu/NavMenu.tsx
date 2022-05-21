@@ -26,18 +26,28 @@ const NavMenu: React.FC<Props> = ({ scroll }) => {
   return (
     <nav className={`navmenu ${stickyClass}`}>
       <img src={hk_transparent} alt='webdev' className='navmenu__image' />
-      <Link to={{ hash: '#home' }} onClick={() => scroll('#home')}>
-        <p className='navmenu__link'>Home</p>
-      </Link>
-      <Link to={{ hash: '#about' }} onClick={() => scroll('#about')}>
-        <p className='navmenu__link'>About</p>
-      </Link>
-      <Link to={{ hash: '#skills' }} onClick={() => scroll('#skills')}>
-        <p className='navmenu__link'>Skills</p>
-      </Link>
-      <Link to={{ hash: '#portfolio' }} onClick={() => scroll('#portfolio')}>
-        <p className='navmenu__link'>Portfolio</p>
-      </Link>
+      <div className='navmenu__links-wrapper'>
+        <p className='navmenu__link'>
+          <Link to={{ hash: '#home' }} onClick={() => scroll('#home')}>
+            Home
+          </Link>
+        </p>
+        <p className='navmenu__link'>
+          <Link to={{ hash: '#about' }} onClick={() => scroll('#about')}>
+            About
+          </Link>
+        </p>
+        <p className='navmenu__link'>
+          <Link to={{ hash: '#skills' }} onClick={() => scroll('#skills')}>
+            Skills
+          </Link>
+        </p>
+        <p className='navmenu__link'>
+          <Link to={{ hash: '#portfolio' }} onClick={() => scroll('#portfolio')}>
+            Portfolio
+          </Link>
+        </p>
+      </div>
     </nav>
   );
 };
