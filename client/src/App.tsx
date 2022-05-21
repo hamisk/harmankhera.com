@@ -3,6 +3,8 @@ import NavMenu from './components/NavMenu/NavMenu';
 import Home from './pages/Home/Home';
 import Portfolio from './pages/Portfolio/Portfolio';
 import './App.scss';
+import About from './pages/About/About';
+import Skills from './pages/Skills/Skills';
 
 const App: React.FC = () => {
   const scroll = (id: string) => {
@@ -22,14 +24,14 @@ const App: React.FC = () => {
             path='/'
             element={
               <>
-                <Home scroll={scroll} /> <Portfolio />
+                <Home scroll={scroll} /> <About /> <Skills /> <Portfolio />
               </>
             }
           />
+          <Route path='/about' element={<About />} />
           <Route path='/portfolio' element={<Portfolio />} />
           <Route path='/bandsite' />
           <Route path='/coffeeshop' />
-          {/* <Route path='/hackathon' /> */}
           <Route path='/travelsite' />
           <Route path='/brainflix' />
           <Route path='/instock' />
