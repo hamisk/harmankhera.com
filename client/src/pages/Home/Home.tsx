@@ -10,6 +10,7 @@ const Home: React.FC<Props> = ({ scroll }) => {
   return (
     <div className='home' id='home'>
       <img src={bg_forest} alt='forest background' className='home__bg-image' />
+      <div className='home__bg-image-overlay'></div>
       <h1 className='home__title'>
         Hi, I'm <span className='home__name'>Harman Khera</span>
       </h1>

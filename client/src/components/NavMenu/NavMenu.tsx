@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import hk_transparent from '../../assets/images/hk_transparent.png';
 import './NavMenu.scss';
@@ -17,6 +17,7 @@ const NavMenu: React.FC<Props> = ({ scroll, componentTops }) => {
     portfolio: false,
   });
   let intViewportHeight: number = window.innerHeight;
+  const navRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     window.addEventListener('scroll', onScrolling);
@@ -26,22 +27,35 @@ const NavMenu: React.FC<Props> = ({ scroll, componentTops }) => {
   const onScrolling = () => {
     if (window !== undefined) {
       let yPosition = window.scrollY;
+      console.log(yPosition);
       yPosition > intViewportHeight - 1 ? setStickyClass('navmenu--sticky') : setStickyClass('');
-      if (yPosition > componentTops.portfolioTop - 50) {
+      if (yPosition > componentTops.portfolioTop - 150) {
+        navRef.current?.scrollTo({
+          top: 120,
+          behavior: 'smooth',
+        });
         setCurrentSection({
           home: false,
           about: false,
           skills: false,
           portfolio: true,
         });
-      } else if (yPosition > componentTops.skillsTop - 50) {
+      } else if (yPosition > componentTops.skillsTop - 150) {
+        navRef.current?.scrollTo({
+          top: 80,
+          behavior: 'smooth',
+        });
         setCurrentSection({
           home: false,
           about: false,
           skills: true,
           portfolio: false,
         });
-      } else if (yPosition > componentTops.aboutTop - 50) {
+      } else if (yPosition > componentTops.aboutTop - 150) {
+        navRef.current?.scrollTo({
+          top: 40,
+          behavior: 'smooth',
+        });
         setCurrentSection({
           home: false,
           about: true,
@@ -49,6 +63,10 @@ const NavMenu: React.FC<Props> = ({ scroll, componentTops }) => {
           portfolio: false,
         });
       } else {
+        navRef.current?.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
         setCurrentSection({
           home: true,
           about: false,
@@ -62,7 +80,7 @@ const NavMenu: React.FC<Props> = ({ scroll, componentTops }) => {
   return (
     <nav className={`navmenu ${stickyClass}`}>
       <img src={hk_transparent} alt='webdev' className='navmenu__image' />
-      <div className='navmenu__links-wrapper'>
+      <div className='navmenu__links-wrapper' ref={navRef}>
         <p className={currentSection.home ? 'navmenu__link navActive' : 'navmenu__link'}>
           <Link to={{ hash: '#home' }} onClick={() => scroll('#home')}>
             Home
