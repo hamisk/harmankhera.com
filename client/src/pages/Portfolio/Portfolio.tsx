@@ -1,29 +1,28 @@
 import './Portfolio.scss';
 import Preview from '../../components/Preview/Preview';
-import { useLayoutEffect, useRef, useState } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import { Project } from '../../Project';
 
 const projects: Project[] = require('../../data/projects.json');
 
-const Portfolio: React.FC = () => {
+const Portfolio = React.forwardRef((props, ref: any) => {
   // const [showModal, setShowModal] = useState<boolean>(false)
   // const [modalProjectName, setModalProjectName] = useState<string | boolean>(false);
 
-  // using ref to ref portfolio div
-  // to find position of top of portfolio div to animate on scroll
-  const portfolioRef = useRef<HTMLDivElement>(null);
   const [activeClass, setActiveClass] = useState('');
 
   useLayoutEffect(() => {
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const onScroll = () => {
     const scrollPos = window.scrollY + window.innerHeight;
-    const topPos = portfolioRef.current?.getBoundingClientRect().top;
+    // const topPos = portfolioRef.current?.getBoundingClientRect().top;
+    const topPos = ref.current?.getBoundingClientRect().top;
+    // console.log(portfolioRef.current?.offsetTop);
     // console.log(scrollPos);
-    // console.log(topPos);
     topPos && topPos + 50 < scrollPos ? setActiveClass('active') : setActiveClass('');
   };
 
@@ -41,7 +40,7 @@ const Portfolio: React.FC = () => {
   };
 
   return (
-    <div className='portfolio' id='portfolio'>
+    <div className='portfolio' id='portfolio' ref={ref}>
       {/* {projects.map(modalProject => {
                 return <Modal showModal={modalProject.project === modalProjectName} 
                 handleClose={hideModal}
@@ -51,7 +50,7 @@ const Portfolio: React.FC = () => {
                 key={modalProject.id + 100}
                 />})} */}
       <h2 className='portfolio__title'>Projects</h2>
-      <div className={`portfolio__grid reveal ${activeClass}`} ref={portfolioRef}>
+      <div className={`portfolio__grid reveal ${activeClass}`}>
         {projects.map((project, index) => {
           return (
             <Preview
@@ -72,6 +71,6 @@ const Portfolio: React.FC = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Portfolio;

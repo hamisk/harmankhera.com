@@ -1,8 +1,9 @@
+import React from 'react';
 import './About.scss';
 
-function About() {
+const About = React.forwardRef((props, ref: any) => {
   return (
-    <section className='about' id='about'>
+    <section className='about' id='about' ref={ref}>
       <h2 className='about__title'>About</h2>
       <p className='about__text'>
         What excites me most about web dev is the opportunity it provides to come up with creative solutions to real
@@ -14,6 +15,6 @@ function About() {
       </p>
     </section>
   );
-}
+});
 
 export default About;

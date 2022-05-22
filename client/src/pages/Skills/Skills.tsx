@@ -5,10 +5,9 @@ import misc from '../../assets/icons/developing.png';
 import './Skills.scss';
 
 // type Props = {};
-
-function Skills() {
+const Skills = React.forwardRef((props, ref: any) => {
   return (
-    <div className='skills' id='skills'>
+    <div className='skills' id='skills' ref={ref}>
       <h2 className='skills__title'>Skills</h2>
       <div className='skills__cards'>
         <div className='skillcard'>
@@ -48,6 +47,6 @@ function Skills() {
       </div>
     </div>
   );
-}
+});
 
 export default Skills;

@@ -56,9 +56,10 @@
   &__link {
     margin: 0 1rem;
     // color: $color-black-olive;
-    color: white;
+    color: whitesmoke;
     font-size: 2rem;
     width: 12rem;
+    transition: all 1s ease;
     @include tablet {
       width: unset;
       font-size: 1.5rem;
@@ -78,13 +79,8 @@
   }
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.example::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.example {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+.navActive {
+  font-weight: 600;
+  color: white;
+  transition: all 1s ease;
 }
