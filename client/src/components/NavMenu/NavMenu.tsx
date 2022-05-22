@@ -27,7 +27,6 @@ const NavMenu: React.FC<Props> = ({ scroll, componentTops }) => {
   const onScrolling = () => {
     if (window !== undefined) {
       let yPosition = window.scrollY;
-      console.log(yPosition);
       yPosition > intViewportHeight - 1 ? setStickyClass('navmenu--sticky') : setStickyClass('');
       if (yPosition > componentTops.portfolioTop - 150) {
         navRef.current?.scrollTo({

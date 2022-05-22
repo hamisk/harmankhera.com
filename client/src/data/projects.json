@@ -38,7 +38,7 @@
   {
     "id": 0,
     "project": "coffeeshop",
-    "background": "/img/slides/coffeeshop-0.png",
+    "background": "/img/slides/coffeeshop-0.jpg",
     "title": "Coffee Shop",
     "tech": "HTML / SCSS",
     "description": "A responsive website for a local coffee shop.",
@@ -70,7 +70,7 @@
   {
     "id": 1,
     "project": "travelsite",
-    "background": "/img/slides/travelsite-0.png",
+    "background": "/img/slides/travelsite-0.jpg",
     "title": "Travel Site",
     "tech": "HTML / CSS",
     "description": "A responsive website for a local travel agency.",
@@ -90,7 +90,7 @@
   {
     "id": 7,
     "project": "greenly",
-    "background": "/img/slides/greenly-0.png",
+    "background": "/img/slides/greenly-0.jpg",
     "title": "Greenly",
     "tech": "React / Chart.js / Node.js / Express / MySQL",
     "description": "Capstone project for BrainStation web development programme. Single page web application to keep a track of the carbon emissions of everyday activities",
@@ -118,7 +118,7 @@
   {
     "id": 5,
     "project": "brainflix",
-    "background": "/img/slides/brainflix-0.png",
+    "background": "/img/slides/brainflix-0.jpg",
     "title": "BrainFlix",
     "tech": "React / Node.js / Express / REST API",
     "description": "Full-stack video streaming site with videos served from API and comments section",
@@ -150,7 +150,7 @@
   {
     "id": 6,
     "project": "instock",
-    "background": "/img/slides/instock-0.png",
+    "background": "/img/slides/instock-0.jpg",
     "title": "InStock",
     "tech": "React / Node.js / Express / REST API",
     "description": "Full-stack Inventory Management System built as part of a team using Agile Scrum methodology with Jira.",
