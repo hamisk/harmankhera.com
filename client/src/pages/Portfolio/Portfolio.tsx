@@ -6,10 +6,7 @@ import { Project } from '../../Project';
 const projects: Project[] = require('../../data/projects.json');
 
 const Portfolio = React.forwardRef((props, ref: any) => {
-  // const [showModal, setShowModal] = useState<boolean>(false)
-  // const [modalProjectName, setModalProjectName] = useState<string | boolean>(false);
-
-  const [activeClass, setActiveClass] = useState('');
+  const [activeClass, setActiveClass] = useState(false);
 
   useLayoutEffect(() => {
     window.addEventListener('scroll', onScroll);
@@ -18,21 +15,13 @@ const Portfolio = React.forwardRef((props, ref: any) => {
   }, []);
 
   const onScroll = () => {
-    const scrollPos = window.scrollY + window.innerHeight;
-    // const topPos = portfolioRef.current?.getBoundingClientRect().top;
-    const topPos = ref.current?.getBoundingClientRect().top;
-    // console.log(portfolioRef.current?.offsetTop);
-    // console.log(scrollPos);
-    topPos && topPos + 50 < scrollPos ? setActiveClass('active') : setActiveClass('');
+    const scrollPos = window.scrollY;
+    // const topPos = ref.current?.getBoundingClientRect().top;
+    const portfolioTop = ref.current?.offsetTop;
+    scrollPos > portfolioTop - 200 ? setActiveClass(true) : setActiveClass(false);
   };
 
-  // const modalProject = projects.filter(project => project.project === modalProjectName)[0]
   projects.sort((a, b) => b.id - a.id);
-
-  // const hideModal = () => {
-  //   // setShowModal(false)
-  //   // setModalProjectName(false);
-  // };
 
   const openInNewTab = (url: string): void => {
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
@@ -41,16 +30,8 @@ const Portfolio = React.forwardRef((props, ref: any) => {
 
   return (
     <div className='portfolio' id='portfolio' ref={ref}>
-      {/* {projects.map(modalProject => {
-                return <Modal showModal={modalProject.project === modalProjectName} 
-                handleClose={hideModal}
-                images={modalProject.images}
-                modalProject={modalProject}
-                openInNewTab={openInNewTab}
-                key={modalProject.id + 100}
-                />})} */}
       <h2 className='portfolio__title'>Projects</h2>
-      <div className={`portfolio__grid reveal ${activeClass}`}>
+      <div className={`portfolio__grid reveal active`}>
         {projects.map((project, index) => {
           return (
             <Preview
@@ -59,12 +40,11 @@ const Portfolio = React.forwardRef((props, ref: any) => {
               background={project.background}
               title={project.title}
               tech={project.tech}
-              // setModalProjectName={setModalProjectName}
               style={{ transitionDelay: `${0.25 * index}s` }}
               openInNewTab={openInNewTab}
               siteUrl={project.siteURL}
-              // setShowModal={setShowModal}
               showButton={project.enableLink}
+              active={activeClass}
             />
           );
         })}
