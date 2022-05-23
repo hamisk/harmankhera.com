@@ -59,7 +59,7 @@
     color: whitesmoke;
     font-size: 2rem;
     width: 12rem;
-    transition: all 1s ease;
+    transition: all 0.5s ease;
     @include tablet {
       width: unset;
       font-size: 1.5rem;
@@ -80,7 +80,7 @@
 }
 
 .navActive {
-  font-weight: 500;
+  font-weight: 600;
   color: white;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
