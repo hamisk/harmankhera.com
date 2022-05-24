@@ -13,9 +13,14 @@ interface Props {
   active: boolean;
 }
 
+let triggered = false;
+
 const Preview: React.FC<Props> = ({ background, title, tech, style, openInNewTab, siteUrl, showButton, active }) => {
+  if (active) triggered = true;
   return (
-    <div className={active ? 'preview__container reveal active' : 'preview__container reveal'} style={style}>
+    <div
+      className={active || triggered ? 'preview__container reveal active' : 'preview__container reveal'}
+      style={style}>
       <img src={background} alt='screenshot' className='preview__image' />
       <div className='preview__overlay'>
         <div className='preview__text'>

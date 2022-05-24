@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import NavMenu from './components/NavMenu/NavMenu';
 import Home from './pages/Home/Home';
 import Portfolio from './pages/Portfolio/Portfolio';
@@ -8,7 +8,8 @@ import Skills from './pages/Skills/Skills';
 import './App.scss';
 
 const App: React.FC = () => {
-  const [componentTops, setComponentTops] = useState({});
+  const [componentTops, setComponentTops] = useState<any>({});
+  const [activeSection, setActiveSection] = useState<string>('home');
 
   const scroll = (id: string) => {
     const section = document.querySelector(id);
@@ -18,7 +19,7 @@ const App: React.FC = () => {
   };
 
   const aboutRef = useRef<HTMLElement>(null);
-  const skillsRef = useRef<HTMLElement>(null);
+  const skillsRef = useRef<HTMLDivElement>(null);
   const portfolioRef = useRef<HTMLElement>(null);
 
   useLayoutEffect(() => {
@@ -28,6 +29,26 @@ const App: React.FC = () => {
       portfolioTop: portfolioRef.current?.offsetTop,
     });
   }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  });
+
+  const onScroll = () => {
+    if (window !== undefined) {
+      let yPosition = window.scrollY;
+      if (yPosition > componentTops.portfolioTop - 150) {
+        setActiveSection('portfolio');
+      } else if (yPosition > componentTops.skillsTop - 150) {
+        setActiveSection('skills');
+      } else if (yPosition > componentTops.aboutTop - 150) {
+        setActiveSection('about');
+      } else {
+        setActiveSection('home');
+      }
+    }
+  };
 
   return (
     <BrowserRouter>
@@ -40,7 +61,7 @@ const App: React.FC = () => {
               <>
                 <Home scroll={scroll} />
                 <About ref={aboutRef} />
-                <Skills ref={skillsRef} />
+                <Skills activeSection={activeSection} ref={skillsRef} />
                 <Portfolio ref={portfolioRef} />
               </>
             }
