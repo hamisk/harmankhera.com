@@ -6,18 +6,15 @@ import './NavMenu.scss';
 interface Props {
   scroll: (id: string) => void;
   componentTops: any;
+  activeSection: string;
 }
 
-const NavMenu: React.FC<Props> = ({ scroll, componentTops }) => {
+const NavMenu: React.FC<Props> = ({ scroll, componentTops, activeSection }) => {
   const [stickyClass, setStickyClass] = useState<string>('');
-  const [currentSection, setCurrentSection] = useState({
-    home: true,
-    about: false,
-    skills: false,
-    portfolio: false,
-  });
-  let intViewportHeight: number = window.innerHeight;
   const navRef = useRef<HTMLDivElement>(null);
+
+  let intViewportHeight: number = window.innerHeight;
+  let menuItemHeight = 38;
 
   useEffect(() => {
     window.addEventListener('scroll', onScrolling);
@@ -28,49 +25,25 @@ const NavMenu: React.FC<Props> = ({ scroll, componentTops }) => {
     if (window !== undefined) {
       let yPosition = window.scrollY;
       yPosition > intViewportHeight - 1 ? setStickyClass('navmenu--sticky') : setStickyClass('');
-      if (yPosition > componentTops.portfolioTop - 150) {
+      if (yPosition > componentTops.portfolioTop - window.innerHeight / 3) {
         navRef.current?.scrollTo({
-          top: 120,
+          top: menuItemHeight * 3,
           behavior: 'smooth',
         });
-        setCurrentSection({
-          home: false,
-          about: false,
-          skills: false,
-          portfolio: true,
-        });
-      } else if (yPosition > componentTops.skillsTop - 150) {
+      } else if (yPosition > componentTops.skillsTop - window.innerHeight / 3) {
         navRef.current?.scrollTo({
-          top: 80,
+          top: menuItemHeight * 2,
           behavior: 'smooth',
         });
-        setCurrentSection({
-          home: false,
-          about: false,
-          skills: true,
-          portfolio: false,
-        });
-      } else if (yPosition > componentTops.aboutTop - 150) {
+      } else if (yPosition > componentTops.aboutTop - window.innerHeight / 3) {
         navRef.current?.scrollTo({
-          top: 40,
+          top: menuItemHeight,
           behavior: 'smooth',
-        });
-        setCurrentSection({
-          home: false,
-          about: true,
-          skills: false,
-          portfolio: false,
         });
       } else {
         navRef.current?.scrollTo({
           top: 0,
           behavior: 'smooth',
-        });
-        setCurrentSection({
-          home: true,
-          about: false,
-          skills: false,
-          portfolio: false,
         });
       }
     }
@@ -80,22 +53,22 @@ const NavMenu: React.FC<Props> = ({ scroll, componentTops }) => {
     <nav className={`navmenu ${stickyClass}`}>
       <img src={hk_transparent} alt='webdev' className='navmenu__image' />
       <div className='navmenu__links-wrapper' ref={navRef}>
-        <p className={currentSection.home ? 'navmenu__link navActive' : 'navmenu__link'}>
+        <p className={activeSection === 'home' ? 'navmenu__link navActive' : 'navmenu__link'}>
           <Link to={{ hash: '#home' }} onClick={() => scroll('#home')}>
             Home
           </Link>
         </p>
-        <p className={currentSection.about ? 'navmenu__link navActive' : 'navmenu__link'}>
+        <p className={activeSection === 'about' ? 'navmenu__link navActive' : 'navmenu__link'}>
           <Link to={{ hash: '#about' }} onClick={() => scroll('#about')}>
             About
           </Link>
         </p>
-        <p className={currentSection.skills ? 'navmenu__link navActive' : 'navmenu__link'}>
+        <p className={activeSection === 'skills' ? 'navmenu__link navActive' : 'navmenu__link'}>
           <Link to={{ hash: '#skills' }} onClick={() => scroll('#skills')}>
             Skills
           </Link>
         </p>
-        <p className={currentSection.portfolio ? 'navmenu__link navActive' : 'navmenu__link'}>
+        <p className={activeSection === 'portfolio' ? 'navmenu__link navActive' : 'navmenu__link'}>
           <Link to={{ hash: '#portfolio' }} onClick={() => scroll('#portfolio')}>
             Portfolio
           </Link>

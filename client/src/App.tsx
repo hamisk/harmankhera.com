@@ -38,11 +38,11 @@ const App: React.FC = () => {
   const onScroll = () => {
     if (window !== undefined) {
       let yPosition = window.scrollY;
-      if (yPosition > componentTops.portfolioTop - 150) {
+      if (yPosition > componentTops.portfolioTop - window.innerHeight / 3) {
         setActiveSection('portfolio');
-      } else if (yPosition > componentTops.skillsTop - 150) {
+      } else if (yPosition > componentTops.skillsTop - window.innerHeight / 3) {
         setActiveSection('skills');
-      } else if (yPosition > componentTops.aboutTop - 150) {
+      } else if (yPosition > componentTops.aboutTop - window.innerHeight / 3) {
         setActiveSection('about');
       } else {
         setActiveSection('home');
@@ -53,7 +53,7 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <div className='App'>
-        <NavMenu scroll={scroll} componentTops={componentTops} />
+        <NavMenu scroll={scroll} componentTops={componentTops} activeSection={activeSection} />
         <Routes>
           <Route
             path='/'
