@@ -20,7 +20,7 @@ const App: React.FC = () => {
 
   const aboutRef = useRef<HTMLElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
-  const portfolioRef = useRef<HTMLElement>(null);
+  const portfolioRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
     setComponentTops({
@@ -62,12 +62,12 @@ const App: React.FC = () => {
                 <Home scroll={scroll} />
                 <About ref={aboutRef} />
                 <Skills activeSection={activeSection} ref={skillsRef} />
-                <Portfolio ref={portfolioRef} />
+                <Portfolio activeSection={activeSection} ref={portfolioRef} />
               </>
             }
           />
           <Route path='/about' element={<About />} />
-          <Route path='/portfolio' element={<Portfolio />} />
+          <Route path='/portfolio' element={<Portfolio activeSection={activeSection} ref={portfolioRef} />} />
           <Route path='/bandsite' />
           <Route path='/coffeeshop' />
           <Route path='/travelsite' />

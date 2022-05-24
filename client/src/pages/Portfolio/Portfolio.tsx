@@ -1,25 +1,18 @@
 import './Portfolio.scss';
 import Preview from '../../components/Preview/Preview';
-import React, { useLayoutEffect, useState } from 'react';
+import React from 'react';
 import { Project } from '../../Project';
 
 const projects: Project[] = require('../../data/projects.json');
 
-const Portfolio = React.forwardRef((props, ref: any) => {
-  const [activeClass, setActiveClass] = useState(false);
-
-  useLayoutEffect(() => {
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const onScroll = () => {
-    const scrollPos = window.scrollY;
-    // const topPos = ref.current?.getBoundingClientRect().top;
-    const portfolioTop = ref.current?.offsetTop;
-    scrollPos > portfolioTop - 200 ? setActiveClass(true) : setActiveClass(false);
-  };
+type Props = {
+  activeSection: string;
+};
+const Portfolio = React.forwardRef<HTMLDivElement, Props>((props, ref: any) => {
+  let activeClass = false;
+  if (props.activeSection === 'portfolio') {
+    activeClass = true;
+  }
 
   projects.sort((a, b) => b.id - a.id);
 
