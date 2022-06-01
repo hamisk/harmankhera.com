@@ -38,11 +38,11 @@ const App: React.FC = () => {
   const onScroll = () => {
     if (window !== undefined) {
       let yPosition = window.scrollY;
-      if (yPosition > componentTops.portfolioTop - window.innerHeight / 3) {
+      if (yPosition > componentTops.portfolioTop - window.innerHeight / 2) {
         setActiveSection('portfolio');
-      } else if (yPosition > componentTops.skillsTop - window.innerHeight / 3) {
+      } else if (yPosition > componentTops.skillsTop - window.innerHeight / 2) {
         setActiveSection('skills');
-      } else if (yPosition > componentTops.aboutTop - window.innerHeight / 3) {
+      } else if (yPosition > componentTops.aboutTop - window.innerHeight / 2) {
         setActiveSection('about');
       } else {
         setActiveSection('home');
