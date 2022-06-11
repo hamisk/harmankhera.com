@@ -1,5 +1,6 @@
 @use '../../styles/partials/colors' as *;
 @use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/keyframes' as *;
 
 .home {
   // background: url('../../assets/images/forest-background-crop-compressed.jpeg') no-repeat center top;
@@ -38,6 +39,9 @@
     font-size: 1.5rem;
     width: fit-content;
     color: white;
+    display: none;
+    animation: slideRight 3s, fadeIn 3s;
+    // animation-delay: 0.5s;
     @include tablet {
       margin: 1rem 3rem;
       font-size: 2.5rem;
@@ -58,12 +62,14 @@
   }
 
   &__buttons {
-    display: flex;
+    display: none;
     // flex-direction: column;
     margin-top: 1rem;
     align-items: flex-start;
     position: absolute;
     bottom: 4rem;
+    animation: slideRight 3s, fadeIn 3s;
+    // animation-delay: 1s;
 
     @include tablet {
       // flex-direction: row;
@@ -107,4 +113,8 @@
   //     left: 0;
   //     right: 0;
   //   }
+}
+
+.show {
+  display: flex;
 }
