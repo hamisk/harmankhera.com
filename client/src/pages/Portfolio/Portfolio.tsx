@@ -33,7 +33,7 @@ const Portfolio = React.forwardRef<HTMLDivElement, Props>((props, ref: any) => {
               background={project.background}
               title={project.title}
               tech={project.tech}
-              style={{ transitionDelay: `${0.25 * index}s` }}
+              style={{ transitionDelay: `${0.5 * index}s` }}
               openInNewTab={openInNewTab}
               siteUrl={project.siteURL}
               showButton={project.enableLink}
